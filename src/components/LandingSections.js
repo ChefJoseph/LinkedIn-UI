@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import LandingSlider from './LandingSlider'
+import SectionConnectSkills from './SectionConnectSkills'
+
 
 function LandingSections () {
 	const [show, setShow] = useState(false)
@@ -82,6 +84,7 @@ function LandingSections () {
 				</SectionBody>
 			</SectionPost>
 			<LandingSlider/>
+			<SectionConnectSkills/>
 		</SectionContainer>
 	)
 }
@@ -132,7 +135,7 @@ const SectionPost = styled.section`
   flex-wrap: wrap;
   max-width: 1128px;
   margin: auto;
-	background-color: #f8f2ec;
+	background-color: #f9f2ed;
   @media (max-width: 768px) {
     margin: auto;
     min-height: 0px;
@@ -199,39 +202,40 @@ const TopicContainer = styled.div`
 
 `
 const TopicButton = styled.a`
-box-shadow: inset 0 0 0 1px #000000E6;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 30px;
-padding: 12px 24px;
-margin: 4px 2px;
-color: #000000E6;
-border-radius: 28px;
-transition-duration: 200ms;
-font-size: 20px;
-font-weight: 600;
-text-align: center;
-background-color: rgba(0, 0, 0, 0);
-&:hover {
-	background-color: rgba(112, 181, 249, 0.08);
-	color: #0a66c2;
+	cursor: pointer;
+	box-shadow: inset 0 0 0 1px #000000E6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+	padding: 12px 24px;
+	margin: 4px 2px;
+	color: #000000BF;
+	border-radius: 28px;
+	transition-duration: 200ms;
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+	background-color: transparent;
+	border-color: rgba(0, 0, 0, 0.6);
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.04);
+		color: rgba(0, 0, 0, 0.9);
 }
 `
 const Show = styled.button`
-display: inline-flex;
-height: 24px;
-width: 24px;
-text-align: left;
-width: fit-content;
-border: none;
-background-color: transparent;
-font-weight: 400px;
-font-size: 16px;
-padding-right: 400px;
-padding-top: 12px;
-padding-bottom: 20px;
-
-
+	display: inline-flex;
+	height: 24px;
+	width: 24px;
+	text-align: left;
+	width: fit-content;
+	border: none;
+	background-color: transparent;
+	font-weight: 400;
+	font-size: 16px;
+	padding-right: 400px;
+	padding-top: 12px;
+	padding-bottom: 20px;
+	cursor: pointer;
 `
 export default LandingSections

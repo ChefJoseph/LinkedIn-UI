@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import CarouselComponent from './CarouselComponent'
+import { sliderData } from './sliderData'
 
 function LandingSlider() {
 // 	var tLeftButton = $("#testimonials-l");
@@ -65,122 +67,81 @@ function LandingSlider() {
 // if ( tItemCount == 1 ) {
 //   $('.testimonials-control').css('display','none');
 // }
+	// const data = ["1", "2", "3"]
+	// const [currentIndex, setCurrentindex] = useState(0)
+	const [current, setCurrent] = useState(0);
+  const length = sliderData.length;
+
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
+
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+
+  if (!Array.isArray(sliderData) || sliderData.length <= 0) {
+    return null;
+  }
 
   return (
-    <SectionSlide>
-				<TitleSlide>
-				<Testimonials>
-    <ul>
-      <li>
-        <p>Hashtag bespoke YOLO, put a bird on it hammock polaroid wayfarers tattooed neutra squid lumbersexual meh humblebrag VHS. Cred tumblr cold-pressed messenger bag small batch trust fund, mustache next level. Keytar swag kogi viral waistcoat flexitarian.</p>
-        <small>Some dude</small>
-      </li>
-      <li>
-        <p>Readymade fashion axe chia, deep v photo booth gochujang jean shorts asymmetrical XOXO you probably haven't heard of them locavore heirloom kale chips dreamcatcher. </p>
-        <small>Some guy</small>
-      </li>
-      <li>
-        <p>Put a bird on it austin jean shorts direct trade cornhole, sriracha street art. Keytar craft beer kitsch polaroid, affogato tofu vinyl butcher.</p>
-        <small>Some other guy</small>
-      </li>
-      <li>
-        <p>Hashtag bespoke YOLO, put a bird on it hammock polaroid wayfarers tattooed neutra squid lumbersexual meh humblebrag VHS. Cred tumblr cold-pressed messenger bag small batch trust fund, mustache next level. Keytar swag kogi viral waistcoat flexitarian.</p>
-        <small>Some dude</small>
-      </li>
-    </ul>
-  </Testimonials>
-  <TestimonialsControl>
-    <i id="testimonials-l"></i>
-    <i id="testimonials-r"></i>
-  </TestimonialsControl>
-				</TitleSlide>
-	</SectionSlide>
+    <Carousel>
+					<ControlDiv>
+					<TestimonialsControl>
+						<button onClick={prevSlide}>
+							<img src="https://img.icons8.com/ios/24/000000/back.png" alt="prev"/>
+							<span>Previous</span>
+						</button>
+						<button onClick={nextSlide}>
+							<span>Next</span>
+							<img src="https://img.icons8.com/ios/24/000000/forward.png" alt="next"/>
+						</button>
+					</TestimonialsControl>
+					</ControlDiv>
+					{sliderData.map((slide, index)=> {
+						return (
+							<CarouselComponent slide={slide} key={index} index={index} current={current}/>
+						)
+					})}
+					
+	</Carousel>
   )
 }
-const SectionSlide = styled.section`
-  display: flex;
-  align-content: start;
-  padding-top: 60px;
+const Carousel = styled.section`
+	padding-top: 150px;
 	padding-bottom: 60px;
-  position: relative;
-	justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 1128px;
-  margin: auto;
-	background-color: #f8f2ec;
-  @media (max-width: 768px) {
-    margin: auto;
-    min-height: 0px;
-  }
-
-`;
-
-const TitleSlide = styled.div`
-	width: 40%;
-  h2 {
-    padding-bottom: 0;
-    width: 408px;
-    font-size: 48px;
-    color: #000000E6;
-    font-weight: 200;
-    line-height: 60px;
-
-    @media (max-width: 768px) {
-      text-align: center;
-      font-size: 20px;
-      width: 100%;
-      line-height: 2;
-    }
-  }
-	h3 {
-    padding-bottom: 0;
-    width: 412px;
-    font-size: 40px;
-    color: #8F5849;
-    font-weight: 400;
-    line-height: 60px;
-
-    @media (max-width: 768px) {
-      text-align: center;
-      font-size: 20px;
-      width: 100%;
-      line-height: 2;
-    }
-  }
-
-`;
-const Testimonials = styled.div`
-background-color: #e8e8e5;
-overflow: hidden;
-width: 100%;
-ul {
-	list-style: none;
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding: 0;
-}
-ul, li {
-  display: inline-block;
-  padding: 1rem;
-  position: relative;
-  text-align: center;
-  width: 100vw;
-}
-ul, li, p {
-  max-width: 600px;
-  margin: 1rem auto;
-  width: 50%;
-}
+	
+`
+const ControlDiv = styled.div`
+	display:flex;
+	justify-content: center;
 `
 const TestimonialsControl = styled.div`
-background-color: rgba(255,255,255,0.2);
-display: flex;
-justify-content: center;
-i{
+	background-color: rgba(255,255,255,0.2);
+	display: flex;
+	justify-content: right;
+	text-align: center;
+	padding-top: 20px;
+	width: 1129px;
+
+	button{
+	height: 40px;
+	width: 95px;
+	border: none;
+	background-color: transparent;
+	font-weight: 400;
+	font-size: 14px;
 	cursor: pointer;
-  padding: 1.3rem;
+	border-radius: 28px;
+
+&:hover{
+	background-color: rgba(0, 0, 0, 0.04);
+	color: rgba(0, 0, 0, 0.9);
+}
+}
+img{
+	cursor: pointer;
+	vertical-align: middle
 }
 `
 export default LandingSlider

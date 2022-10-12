@@ -1,7 +1,7 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 import LandingSections from './LandingSections'
+import Footer from './Footer'
 
 function LandingPage() {
   return (
@@ -55,27 +55,29 @@ function LandingPage() {
       <Section>
 				<Hero>
 					<h1>Welcome to your professional community</h1>
-					<LoginForm>
-						<LoginInput>
-							<Input placeholder="Email or phone number" type="text"/>
-							<Input placeholder="Password" type="password"/>
+					<LoginForm autocomplete="off">
+						<LoginInput autocomplete="off">
+							<Input placeholder="Email or phone number" type="text" autocomplete="off"/>
+							<Input placeholder="Password" type="password" autocomplete="off"/>
 						</LoginInput>
-						<Link href="/" style={{textDecoration: 'none', color: '#000000', margin: '0px, px, 24px'}}>Forgot password?
-						</Link>
+						<a>Forgot password?
+						</a>
 						<SignInButton>
 								Sign in
 						</SignInButton>
+						
 						<Google>
 							<img src="/images/google.svg" alt="" />
 								Sign in with Google
 						</Google>
 					</LoginForm>
 				</Hero>
-      	<Hero2>
+      	<SectionImg>
           <img src="/images/LinkedInLanding1.png" alt="" />
-      	</Hero2>
+      	</SectionImg>
       </Section>
 			<LandingSections/>
+			<Footer/>
     </Container>
   )
 }
@@ -139,6 +141,7 @@ const NavList = styled.li`
     min-width: 80px;
     position: relative;
     text-decoration: none;
+		cursor: pointer;
     span {
       color: rgba(0, 0, 0, 0.6);
       display: flex;
@@ -166,8 +169,9 @@ const Join = styled.a`
   border-radius: 28px;
   color: rgba(0, 0, 0, 0.6);
   margin-right: 12px;
+	cursor: pointer;
   &:hover {
-    background-color: rgba(0, 0, 0, 0.02);
+    background-color: rgba(0, 0, 0, 0.04);
     color: rgba(0, 0, 0, 0.9);
   }
 `;
@@ -182,6 +186,7 @@ const SignIn = styled.a`
   line-height: 40px;
   padding: 16px 25px;
   text-align: center;
+	cursor: pointer;
   background-color: rgba(0, 0, 0, 0);
   &:hover {
     background-color: rgba(112, 181, 249, 0.08);
@@ -226,12 +231,17 @@ const Hero = styled.div`
     }
   }
 `;
-const LoginForm = styled.div`
+const LoginForm = styled.form`
   margin-top: 40px;
   width: 408px;
   @media (max-width: 768px) {
     margin-top: 20px;
   }
+	a {
+		textDecoration: none;
+		 color: #000000E6; 
+
+	}
 `;
 const LoginInput =styled.div`
 	display: flex;
@@ -243,13 +253,17 @@ const LoginInput =styled.div`
 	@media (max-width: 768px) {
 		min-width: 70px;
 	}
+	padding-bottom: 12px;
 `;
 const Input = styled.input`
 	font-size: 1.1rem;
 	font-weight: 400;
 	height: 48px;
-	width: 95%;
+	width: 100%;
 	color: #00000099;
+	border-style: solid;
+	border-color: #rgba(0, 0, 0, 0.6);
+	border-width: 1px;
 	padding-left: 12px;
 	border-radius: 2px;
 	margin-bottom: 10px;
@@ -258,13 +272,15 @@ const SignInButton = styled.button`
   display: flex;
   justify-content: center;
   background-color: #2977C9;
+	border: none;
 	color: white;
   align-items: center;
   height: 56px;
   width: 100%;
   border-radius: 28px;
 	margin-top: 20px;
-	margin-bottom: 25px;
+	margin-bottom: 40px;
+	cursor: pointer;
   box-shadow: inset 0 0 0 1px rgb(0 0 0 / 60%),
     inset 0 0 0 2px rgb(0 0 0 / 0%) inset 0 0 0 1px rgb(0 0 0 / 0);
   vertical-align: middle;
@@ -285,6 +301,7 @@ const Google = styled.button`
   align-items: center;
   height: 56px;
   width: 100%;
+	border-width: 1px;
   border-radius: 28px;
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -295,6 +312,7 @@ const Google = styled.button`
   transition-duration: 167ms;
   font-size: 20px;
   color: rgba(0, 0, 0, 0.6);
+	cursor: pointer;
   &:hover {
     background-color: rgba(207, 207, 207, 0.25);
     color: rgba(0, 0, 0, 0.75);
@@ -303,7 +321,7 @@ const Google = styled.button`
 		padding-right: 25px;
 	}
 `;
-const Hero2 = styled.div`
+const SectionImg = styled.div`
 display: flex;
 width: 44%;
 align-items: flex-end;
