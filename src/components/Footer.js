@@ -10,6 +10,7 @@ function Footer() {
 const Container = styled.div`
 
 margin: auto;
+margin-top: 60px;
 width: 1128px;
 padding-right: 75px;
 

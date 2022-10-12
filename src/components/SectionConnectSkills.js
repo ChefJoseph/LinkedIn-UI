@@ -21,9 +21,10 @@ function SectionConnectSkills() {
   )
 }
 const Section = styled.div`
-height: 675px;
+height: 915px;
 width: 100%;
-padding-top: 60px;
+// padding-top: 60px;
+padding-bottom: 60px;
 background-color: #FFFFFF;
 display:flex;
 justify-content: center;
@@ -32,7 +33,7 @@ const TestimonialsLi = styled.li`
 
 display: flex;
 align-content: start;
-padding-top: 15px;
+
 padding-bottom: 10px;
 position: relative;
 
@@ -122,7 +123,7 @@ const TitleContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 30px;
+	height: 35px;
   width: max-content;
 	padding: 12px 24px;
 	margin: 40px 2px;

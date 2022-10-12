@@ -105,7 +105,7 @@ function LandingSlider() {
 const Carousel = styled.section`
 display: flex;
 	padding-top: 150px;
-	padding-bottom: 60px;
+	padding-bottom: 150px;
 	justify-content: center;
 	
 `

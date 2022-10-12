@@ -238,6 +238,7 @@ const LoginForm = styled.form`
     margin-top: 20px;
   }
 	a {
+		cursor: pointer;
 		textDecoration: none;
 		 color: #000000E6; 
 
@@ -303,6 +304,7 @@ const Google = styled.button`
   width: 100%;
 	border-width: 1px;
   border-radius: 28px;
+	border-color: #00000099;
 	margin-top: 15px;
 	margin-bottom: 15px;
   box-shadow: inset 0 0 0 1px rgb(0 0 0 / 60%),
