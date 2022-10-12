@@ -27,6 +27,7 @@ function LandingSections () {
 						</TopicContainer>
 				</SectionBody>
 			</Section>
+			<SectionWhite>
 			<SectionJob>
 				<Title>
 						<h2>Find the right job or internship for you</h2>
@@ -73,16 +74,19 @@ function LandingSections () {
 						</TopicContainer>
 				</SectionBody>
 			</SectionJob>
-			<SectionPost>
-				<Title>
-						<h3>Post your job for millions of people to see</h3>
-				</Title>
-				<SectionBody>
-						<TopicContainer>
-							<TopicButton>Post a job</TopicButton>
-						</TopicContainer>
-				</SectionBody>
-			</SectionPost>
+			</SectionWhite>
+			<SectionBeige>
+				<SectionPost>
+					<Title>
+							<h3>Post your job for millions of people to see</h3>
+					</Title>
+					<SectionBody>
+							<TopicContainer>
+								<TopicButton>Post a job</TopicButton>
+							</TopicContainer>
+					</SectionBody>
+				</SectionPost>
+			</SectionBeige>
 			<LandingSlider/>
 			<SectionConnectSkills/>
 		</SectionContainer>
@@ -109,6 +113,15 @@ const Section = styled.section`
     min-height: 0px;
   }
 `;
+const SectionWhite = styled.div`
+width: 100%;
+background-color: #FFFFFF;
+`
+const SectionBeige= styled.div`
+width: 100%;
+background-color: #f9f2ed;
+`
+
 const SectionJob = styled.section`
   display: flex;
   align-content: start;

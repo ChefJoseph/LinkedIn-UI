@@ -9,9 +9,10 @@ function Footer() {
 }
 const Container = styled.div`
 
-margin: 20px auto;
+margin: auto;
 width: 1128px;
-padding: 10px 0;
+padding-right: 75px;
+
 img{
 	width: 180%;
   /* Set left edge of inner element to 50% of the parent element */

@@ -1,47 +1,37 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function CarouselComponent() {
+function CarouselComponent( {slide, index, current}) {
+
   return (
     <CarouselContainer>
-							<TestimonialsLi id= "1">
-								<TitleContainer>
-									<h3>Let the right people know you're open to work</h3>
-									<h4>With the Open To Work feature, you can privately tell recruiters or publicly share with the LinkedIn community that you are looking for new job opportunities.</h4>
-								</TitleContainer>
-								<SectionImg>
-									<img src = "/images/opentowork.png" alt="image"/>
-								</SectionImg>							
-							</TestimonialsLi>
-							<TestimonialsLi id= "2">
-								<TitleContainer>
-								<h3>Conversations today could lead to opportunity tomorrow</h3>
-								<h4>Sending messages to people you know is a great way to strengthen relationships as you take the next step in your career.</h4>
-								</TitleContainer>
-								<SectionImg>
-									<img src = "/images/opportunity.png" alt="image"/>
-								</SectionImg>	
-							</TestimonialsLi>
-							<TestimonialsLi id= "3">
-								<TitleContainer>
-								<h3>Stay up to date on your industry</h3>
-								<h4>From live videos, to stories, to newsletters and more, LinkedIn is full of ways to stay up to date on the latest discussions in your industry.</h4>
-								</TitleContainer>
-								<SectionImg>
-									<img src = "/images/uptodate.png" alt="image"/>
-								</SectionImg>	
-							</TestimonialsLi>
-						</CarouselContainer>
+			{index === current && (
+			<TestimonialsLi>
+				<TitleContainer>
+					<h3>{slide.h3}</h3>
+					<h4>{slide.h4}</h4>
+				</TitleContainer>
+				<SectionImg>
+					<img src = {slide.image} alt = 'altimg'/>
+				</SectionImg>							
+			</TestimonialsLi>
+			)}					
+	</CarouselContainer>
   )
 }
+
 const CarouselContainer = styled.ul`
 display: flex;
 overflow-x: auto;
+// scroll-behavior: smooth;
+// transition: background-position 1500ms ease-out;
+
+
 -webkit-overflow-scrolling: touch;
 scroll-snap-points-x: repeat(1128px);
 scroll-snap-type: x mandatory;
 width: 1128px;
-// margin-left: 5%;
+margin-left: 5%;
 overflow: hidden;
 li {
 	text-align: left;
@@ -53,7 +43,7 @@ li {
 }
 `
 const TestimonialsLi = styled.li`
-transtions: 1s cubic-bezier(0.4, 0.5, 0.5, 1);
+
 display: flex;
 align-content: start;
 padding-top: 15px;
@@ -64,6 +54,7 @@ flex-wrap: wrap;
 max-width: 1128px;
 margin: auto;
 background-color: #f5f5f5;
+
 @media (max-width: 768px) {
 	margin: auto;
 	min-height: 0px;
@@ -87,7 +78,7 @@ ul, li {
 `
 const TitleContainer = styled.div`
 	display: block;
-	align-items: left;
+	align-items: center;
 	width: 50%;
 	padding-top: 90px;
 	
@@ -107,7 +98,6 @@ const TitleContainer = styled.div`
     }
   }
 	h3 {
-		
     padding-bottom: 10px;
     width: 100%;
     font-size: 40px;

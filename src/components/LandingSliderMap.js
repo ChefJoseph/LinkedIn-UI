@@ -97,21 +97,24 @@ function LandingSlider() {
 							<img src="https://img.icons8.com/ios/24/000000/forward.png" alt="next"/>
 						</button>
 					</TestimonialsControl>
-					<CarouselComponent />
 					</ControlDiv>
+					{sliderData.map((slide, index)=> {
+						return (
+							<CarouselComponent slide={slide} key={index} index={index} current={current}/>
+						)
+					})}
+					
 	</Carousel>
   )
 }
 const Carousel = styled.section`
-display: flex;
 	padding-top: 150px;
 	padding-bottom: 60px;
-	justify-content: center;
 	
 `
 const ControlDiv = styled.div`
-	display: column;
-	
+	display:flex;
+	justify-content: center;
 `
 const TestimonialsControl = styled.div`
 	background-color: rgba(255,255,255,0.2);

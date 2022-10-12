@@ -14,20 +14,19 @@ function SectionConnectSkills() {
           <img src = "/images/learnskills.svg" alt = 'altimg'/>
 					<h4>Learn the skills you need to succeed</h4>
           <LearnSkillsDropDown/>
-				</TitleContainer>
-				<SectionImg>
-					
-				</SectionImg>							
+				</TitleContainer>					
 			</TestimonialsLi>
       
     </Section>
   )
 }
 const Section = styled.div`
-height: 916px;
-width: 1128px;
+height: 675px;
+width: 100%;
 padding-top: 60px;
 background-color: #FFFFFF;
+display:flex;
+justify-content: center;
 `
 const TestimonialsLi = styled.li`
 
@@ -36,9 +35,9 @@ align-content: start;
 padding-top: 15px;
 padding-bottom: 10px;
 position: relative;
-justify-content: space-between;
+
 flex-wrap: wrap;
-max-width: 1128px;
+width: 1128px;
 margin: auto;
 background-color: #FFFFFF;
 
@@ -56,7 +55,6 @@ ul {
 }
 ul, li {
   display: inline-block;
-  padding: 1rem;
   position: relative;
   text-align: stretch;
   width: 100%;
@@ -118,25 +116,6 @@ const TitleContainer = styled.div`
     width: 312px;
   }
 `;
-const SectionImg = styled.div`
-display: flex;
-width: 50%;
-align-items: flex-end;
-img {
-	width: 312px;
-	height: 312px;
-	display: block;
-	position: relative;
-	flex-shrink: 1;
-	bottom: -2px;
-	@media (max-width: 768px) {
-		top: 230px;
-		width: 400px;
-		position: static;
-		height: 214px;
-		flex-shrink: 1;
-	}
-	`
   const TopicButton = styled.a`
 	cursor: pointer;
 	box-shadow: inset 0 0 0 1px #000000E6;
@@ -146,8 +125,9 @@ img {
 	height: 30px;
   width: max-content;
 	padding: 12px 24px;
-	margin: 4px 2px;
-	color: #000000E6;
+	margin: 40px 2px;
+	color: #000000BF;
+  border-color: #000000BF;
 	border-radius: 28px;
 	transition-duration: 200ms;
 	font-size: 20px;

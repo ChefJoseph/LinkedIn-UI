@@ -83,7 +83,7 @@ function LandingPage() {
 }
 
 const Container = styled.div`
-	padding: 0px;
+	// padding: 0px;
 `;
 
 const Nav = styled.nav`
