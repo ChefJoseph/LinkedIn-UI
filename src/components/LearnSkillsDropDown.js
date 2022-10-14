@@ -16,7 +16,7 @@ function LearnSkillsDropDown() {
 
           <ul className="slide">
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Training and Education</span>
                     <span className="s2">
                       290+ courses
@@ -24,7 +24,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="true">
                   <span className="s1">IT Help Desk</span>
                     <span className="s2">
                       300+ courses
@@ -32,7 +32,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Business Analysis and Strategy</span>
                     <span className="s2">
                       780+ courses
@@ -40,7 +40,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Career Development</span>
                     <span className="s2">
                       430+ courses
@@ -48,7 +48,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1" >Finance and Accounting</span>
                     <span className="s2">
                       270+ courses
@@ -56,7 +56,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Leadership and Management</span>
                     <span className="s2">
                       1,200+ course
@@ -64,7 +64,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="true">
                   <span className="s1">Mobile Development</span>
                     <span className="s2">
                       460+ courses
@@ -72,7 +72,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Marketing</span>
                     <span className="s2">
                       780+ courses
@@ -80,7 +80,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Cloud Computing</span>
                     <span className="s2">
                       870+ courses
@@ -88,7 +88,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Project Management</span>
                     <span className="s2">
                       380+ courses
@@ -96,7 +96,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Visualization and Real-Time</span>
                     <span className="s2">
                       1,200+ course
@@ -104,7 +104,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Animation and Illustration</span>
                     <span className="s2">
                       1,600+ course
@@ -112,7 +112,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Audio and Music</span>
                     <span className="s2">
                       410+ courses
@@ -120,7 +120,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">AEC</span>
                     <span className="s2">
                       1,400+ course
@@ -128,7 +128,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Graphic Design</span>
                     <span className="s2">
                       900+ courses
@@ -136,7 +136,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Motion Graphics and VFX</span>
                     <span className="s2">
                       890+ courses
@@ -144,7 +144,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="true">
                   <span className="s1">Photography</span>
                     <span className="s2">
                       1,100+ course
@@ -152,7 +152,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Video</span>
                     <span className="s2">
                       590+ courses
@@ -160,7 +160,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="true">
                   <span className="s1">Data Science</span>
                     <span className="s2">
                       830+ courses
@@ -168,7 +168,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Network and System Administration</span>
                     <span className="s2">
                       1,100+ course
@@ -176,7 +176,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="true">
                   <span className="s1">Software Development</span>
                     <span className="s2">
                       1,800+ course
@@ -184,7 +184,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">User Experience</span>
                     <span className="s2">
                       470+ courses
@@ -192,7 +192,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Web Design</span>
                     <span className="s2">
                       520+ courses
@@ -200,7 +200,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a >
+                <a href="true">
                   <span className="s1">Database Management</span>
                     <span className="s2">
                       290+ courses
@@ -208,7 +208,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Web Development</span>
                     <span className="s2">
                       1,300+ course
@@ -216,7 +216,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Product and Manufacturing</span>
                     <span className="s2">
                       1,400+ course
@@ -224,7 +224,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Sales</span>
                     <span className="s2">
                       220+ courses
@@ -232,7 +232,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Human Resources</span>
                     <span className="s2">
                       430+ courses
@@ -240,7 +240,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">DevOps</span>
                     <span className="s2">
                       220+ courses
@@ -248,7 +248,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Small Business and Entrepreneurship</span>
                     <span className="s2">
                       320+ courses
@@ -256,7 +256,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Customer Service</span>
                     <span className="s2">
                       170+ courses
@@ -264,7 +264,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Professional Development</span>
                     <span className="s2">
                       1,200+ course
@@ -272,7 +272,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Business Software and Tools</span>
                     <span className="s2">
                       1,800+ course
@@ -280,7 +280,7 @@ function LearnSkillsDropDown() {
                 </a>
               </li>
               <li >
-                <a href="#">
+                <a href="true">
                   <span className="s1">Security</span>
                     <span className="s2">
                       590+ courses
@@ -376,7 +376,7 @@ nav{
 }
 
 #touch:checked + .slide {
-  height: 450px;
+  height: 382px;
   width: 355px;
   z-index: 100;
   opacity: 1;

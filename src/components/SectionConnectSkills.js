@@ -24,7 +24,7 @@ const Section = styled.div`
 height: 915px;
 width: 100%;
 // padding-top: 60px;
-padding-bottom: 60px;
+// padding-bottom: 60px;
 background-color: #FFFFFF;
 display:flex;
 justify-content: center;

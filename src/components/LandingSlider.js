@@ -1,41 +1,38 @@
-import React, {useState, useRef, useEffect, useCallback} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import styled from 'styled-components'
 // import CarouselComponent from './CarouselComponent'
 import { sliderData } from './sliderData'
 
 function LandingSlider() {
 	const [scrollWidth, setScrollWidth] = useState(0)
-	const [style, setStyle] = useState({});
-  // const [frontScrollWidth, setFrontScrollWidth] = useState(0)
+	
 	const showCaseRef = useRef()
 	const tLeftButton = useRef()
 	const tRightButton = useRef()
-	
-
-	console.log(tLeftButton, "tleft")
-	console.log(showCaseRef, "showcase")
 
 	  // scroll to left
 		function scrollLeft() {
 			// console.log("left")
 			if (scrollWidth > 0) {
-				const left = scrollWidth - 1129
-				showCaseRef.current.scrollLeft = `${left}`
+				const left = scrollWidth - 1128
+				showCaseRef.current.style.transform = `translate(-${left}px)`
 				setScrollWidth(left)
 			}
+			console.log(showCaseRef.current.style.transform, "scrollLeft funct")
 		};
 		  // scroll to right
 			function scrollRight() {
 				// console.log("right")
-				if (scrollWidth < showCaseRef.current.scrollWidth - 1129) {
-					const right = scrollWidth + 1129
-					showCaseRef.current.scrollLeft = `${right}`
+				if (scrollWidth < showCaseRef.current.scrollWidth - 1128) {
+					const right = scrollWidth + 1128
+					showCaseRef.current.style.transform = `translate(-${right}px)`
 					// showCaseRef.current.scrollLeft = `${frontScrollWidth - right}`
 					setScrollWidth(right)
 					// const left = frontScrollWidth - 1128
 					// // showCaseRef.current.scrollLeft = `${left}`
 					// setFrontScrollWidth(left)
 				}
+				console.log(showCaseRef.current.style.transform, "scrollRight funct")
 			};
 
 	const showCarousel = sliderData.map((slide, index)=> {
@@ -55,10 +52,10 @@ function LandingSlider() {
 								})
 
 useEffect (() =>{
-	if (scrollWidth == 0) {
+	if (scrollWidth === 0) {
 		    tLeftButton.current.style.opacity ='0.3';
 		    tLeftButton.current.style.cursor ='not-allowed';
-		  } else if (scrollWidth == 2258) {
+		  } else if (scrollWidth === 2256) {
 		    tRightButton.current.style.opacity ='0.3';
 		    tRightButton.current.style.cursor ='not-allowed';
 		  } else {
@@ -69,7 +66,7 @@ useEffect (() =>{
 		  }
 })
 
-console.log(scrollWidth)
+// console.log(scrollWidth)
 // const greyButton = () => {
 
 //  
@@ -113,8 +110,12 @@ const Carousel = styled.section`
 	
 `
 const ControlDiv = styled.div`
-	display: column;
-	width: 1129px;
+	display: block;
+	// position: relative;
+	// display: column;
+	width: 1128px;
+	overflow: hidden;
+	box-sizing: border-box;
 `
 const TestimonialsControl = styled.div`
 	background-color: #f5f5f5;
@@ -122,7 +123,8 @@ const TestimonialsControl = styled.div`
 	justify-content: right;
 	text-align: center;
 	padding-top: 20px;
-	width: 1129px;
+	width: 100%;
+	
 
 	button{
 	margin: 0px 8px;
@@ -154,16 +156,19 @@ i{
 
 const CarouselContainer = styled.ul`
 display: flex;
+transform: translate(0px);
+transition-duration: 350ms;
+transition-property: all;
+transition-timing-function: cubic-bezier(0.34, 0, 0.21, 1);
 
 // overflow-x: auto;
 scroll-behavior: smooth;
-
+align-items: stretch;
+width: 1128px;
 
 -webkit-overflow-scrolling: touch;
-// scroll-snap-points-x: repeat(1128px);
-// scroll-snap-type: x mandatory;
-width: 1128px;
-overflow: hidden;
+scroll-snap-points-x: repeat(1128px);
+scroll-snap-type: x mandatory;
 
 li {
 	text-align: left;
@@ -184,29 +189,13 @@ padding-bottom: 10px;
 position: relative;
 justify-content: space-between;
 flex-wrap: wrap;
-max-width: 1128px;
+width: 1108px;
 margin: auto;
 background-color: #f5f5f5;
 
 @media (max-width: 768px) {
 	margin: auto;
 	min-height: 0px;
-}
-ul {
-	list-style: none;
-  position: relative;
-  display: flex;
-  align-items: stretch;
-  overflow: hidden;
-  padding: 0;
-}
-ul, li {
-  display: inline-block;
-  padding: 1rem;
-  position: relative;
-  text-align: stretch;
-  width: 100%;
-	max-width: 560px;
 }
 `
 const TitleContainer = styled.div`
