@@ -16,273 +16,273 @@ function LearnSkillsDropDown() {
 
           <ul className="slide">
               <li >
-                <a >
-                  <span >Training and Education</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Training and Education</span>
+                    <span className="s2">
                       290+ courses
                     </span>
                 </a>
               </li>
               <li>
-                <a >
-                  <span >IT Help Desk</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">IT Help Desk</span>
+                    <span className="s2">
                       300+ courses
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Business Analysis and Strategy</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Business Analysis and Strategy</span>
+                    <span className="s2">
                       780+ courses
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Career Development</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Career Development</span>
+                    <span className="s2">
                       430+ courses
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Finance and Accounting</span>
-                    <span >
+                <a href="#">
+                  <span className="s1" >Finance and Accounting</span>
+                    <span className="s2">
                       270+ courses
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Leadership and Management</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Leadership and Management</span>
+                    <span className="s2">
                       1,200+ course
                     </span>
                 </a>
               </li>
               <li>
-                <a >
-                  <span >Mobile Development</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Mobile Development</span>
+                    <span className="s2">
                       460+ courses
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Marketing</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Marketing</span>
+                    <span className="s2">
                       780+ courses
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Cloud Computing</span>
-                    <span>
+                <a href="#">
+                  <span className="s1">Cloud Computing</span>
+                    <span className="s2">
                       870+ courses
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Project Management</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Project Management</span>
+                    <span className="s2">
                       380+ courses
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Visualization and Real-Time</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Visualization and Real-Time</span>
+                    <span className="s2">
                       1,200+ course
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Animation and Illustration</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Animation and Illustration</span>
+                    <span className="s2">
                       1,600+ course
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Audio and Music</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Audio and Music</span>
+                    <span className="s2">
                       410+ courses
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >AEC</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">AEC</span>
+                    <span className="s2">
                       1,400+ course
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Graphic Design</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Graphic Design</span>
+                    <span className="s2">
                       900+ courses
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Motion Graphics and VFX</span>
-                    <span>
+                <a href="#">
+                  <span className="s1">Motion Graphics and VFX</span>
+                    <span className="s2">
                       890+ courses
                     </span>
                 </a>
               </li>
               <li>
-                <a >
-                  <span >Photography</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Photography</span>
+                    <span className="s2">
                       1,100+ course
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span>Video</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Video</span>
+                    <span className="s2">
                       590+ courses
                     </span>
                 </a>
               </li>
               <li>
-                <a >
-                  <span >Data Science</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Data Science</span>
+                    <span className="s2">
                       830+ courses
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Network and System Administration</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Network and System Administration</span>
+                    <span className="s2">
                       1,100+ course
                     </span>
                 </a>
               </li>
               <li>
-                <a >
-                  <span >Software Development</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Software Development</span>
+                    <span className="s2">
                       1,800+ course
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >User Experience</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">User Experience</span>
+                    <span className="s2">
                       470+ courses
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Web Design</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Web Design</span>
+                    <span className="s2">
                       520+ courses
                     </span>
                 </a>
               </li>
               <li >
                 <a >
-                  <span >Database Management</span>
-                    <span >
+                  <span className="s1">Database Management</span>
+                    <span className="s2">
                       290+ courses
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Web Development</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Web Development</span>
+                    <span className="s2">
                       1,300+ course
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Product and Manufacturing</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Product and Manufacturing</span>
+                    <span className="s2">
                       1,400+ course
                     </span>
                 </a>
               </li>
               <li >
-                <a>
-                  <span >Sales</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Sales</span>
+                    <span className="s2">
                       220+ courses
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Human Resources</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Human Resources</span>
+                    <span className="s2">
                       430+ courses
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >DevOps</span>
-                    <span>
+                <a href="#">
+                  <span className="s1">DevOps</span>
+                    <span className="s2">
                       220+ courses
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Small Business and Entrepreneurship</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Small Business and Entrepreneurship</span>
+                    <span className="s2">
                       320+ courses
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Customer Service</span>
-                    <span>
+                <a href="#">
+                  <span className="s1">Customer Service</span>
+                    <span className="s2">
                       170+ courses
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Professional Development</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Professional Development</span>
+                    <span className="s2">
                       1,200+ course
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Business Software and Tools</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Business Software and Tools</span>
+                    <span className="s2">
                       1,800+ course
                     </span>
                 </a>
               </li>
               <li >
-                <a >
-                  <span >Security</span>
-                    <span >
+                <a href="#">
+                  <span className="s1">Security</span>
+                    <span className="s2">
                       590+ courses
                     </span>
                 </a>
@@ -297,9 +297,14 @@ margin-top: 40px;
 height: 60px;
 width: 360px;
 a {
-  text-decoration: none;
+  display: flex;
   color: #0000000;
-
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 nav{
 
@@ -344,8 +349,24 @@ nav{
   opacity: 0;
 }
 .slide li {
-  padding: 16px;
+  padding-top: 16px;
+  padding-left: 16px;
+  display: list-item;
 
+}
+.s1 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: rgba(0, 0, 0, 0.9);
+  vertical-align: baseline;
+}
+.s2 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: rgba(0, 0, 0, 0.6);
+  vertical-align: baseline;
 }
 #touch {
   position: absolute;

@@ -5,7 +5,6 @@ function CarouselComponent( {slide, index, current}) {
 
   return (
     <CarouselContainer>
-			{index === current && (
 			<TestimonialsLi>
 				<TitleContainer>
 					<h3>{slide.h3}</h3>
@@ -14,8 +13,7 @@ function CarouselComponent( {slide, index, current}) {
 				<SectionImg>
 					<img src = {slide.image} alt = 'altimg'/>
 				</SectionImg>							
-			</TestimonialsLi>
-			)}					
+			</TestimonialsLi>			
 	</CarouselContainer>
   )
 }

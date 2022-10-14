@@ -1,16 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function CarouselComponent() {
+function CarouselComponent() { 
+
   return (
-    <CarouselContainer>
+    <CarouselContainer className="container">
 							<TestimonialsLi id= "1">
 								<TitleContainer>
 									<h3>Let the right people know you're open to work</h3>
 									<h4>With the Open To Work feature, you can privately tell recruiters or publicly share with the LinkedIn community that you are looking for new job opportunities.</h4>
 								</TitleContainer>
 								<SectionImg>
-									<img src = "/images/opentowork.png" alt="image"/>
+									<img src = "/images/opentowork.png" alt="opentowork"/>
 								</SectionImg>							
 							</TestimonialsLi>
 							<TestimonialsLi id= "2">
@@ -19,7 +20,7 @@ function CarouselComponent() {
 								<h4>Sending messages to people you know is a great way to strengthen relationships as you take the next step in your career.</h4>
 								</TitleContainer>
 								<SectionImg>
-									<img src = "/images/opportunity.png" alt="image"/>
+									<img src = "/images/opportunity.png" alt="opportunity"/>
 								</SectionImg>	
 							</TestimonialsLi>
 							<TestimonialsLi id= "3">
@@ -28,10 +29,10 @@ function CarouselComponent() {
 								<h4>From live videos, to stories, to newsletters and more, LinkedIn is full of ways to stay up to date on the latest discussions in your industry.</h4>
 								</TitleContainer>
 								<SectionImg>
-									<img src = "/images/uptodate.png" alt="image"/>
+									<img src = "/images/uptodate.png" alt="uptodate"/>
 								</SectionImg>	
 							</TestimonialsLi>
-						</CarouselContainer>
+		</CarouselContainer>
   )
 }
 const CarouselContainer = styled.ul`

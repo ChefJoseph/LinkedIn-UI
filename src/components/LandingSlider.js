@@ -1,109 +1,112 @@
-import React, { useState } from 'react'
+import React, {useState, useRef, useEffect, useCallback} from 'react'
 import styled from 'styled-components'
-import CarouselComponent from './CarouselComponent'
+// import CarouselComponent from './CarouselComponent'
 import { sliderData } from './sliderData'
 
 function LandingSlider() {
-// 	var tLeftButton = $("#testimonials-l");
-// var tRightButton = $("#testimonials-r");
+	const [scrollWidth, setScrollWidth] = useState(0)
+	const [style, setStyle] = useState({});
+  // const [frontScrollWidth, setFrontScrollWidth] = useState(0)
+	const showCaseRef = useRef()
+	const tLeftButton = useRef()
+	const tRightButton = useRef()
+	
 
-// // Get number of <li> elements in carousel
+	console.log(tLeftButton, "tleft")
+	console.log(showCaseRef, "showcase")
 
-// var tItemCount = document.getElementById('testimonials-ul').querySelectorAll('li').length;
+	  // scroll to left
+		function scrollLeft() {
+			// console.log("left")
+			if (scrollWidth > 0) {
+				const left = scrollWidth - 1129
+				showCaseRef.current.scrollLeft = `${left}`
+				setScrollWidth(left)
+			}
+		};
+		  // scroll to right
+			function scrollRight() {
+				// console.log("right")
+				if (scrollWidth < showCaseRef.current.scrollWidth - 1129) {
+					const right = scrollWidth + 1129
+					showCaseRef.current.scrollLeft = `${right}`
+					// showCaseRef.current.scrollLeft = `${frontScrollWidth - right}`
+					setScrollWidth(right)
+					// const left = frontScrollWidth - 1128
+					// // showCaseRef.current.scrollLeft = `${left}`
+					// setFrontScrollWidth(left)
+				}
+			};
 
-// // Set length based on that
+	const showCarousel = sliderData.map((slide, index)=> {
+		return (
+							
+					<TestimonialsLi key={index} >
+						<TitleContainer>
+							<h3>{slide.h3}</h3>
+							<h4>{slide.h4}</h4>
+						</TitleContainer>
+						<SectionImg>
+							<img src = {slide.image} alt = 'altimg'/>
+						</SectionImg>							
+					</TestimonialsLi>			
+			
+									)
+								})
 
-// var tWidth = tItemCount * 100 + "vw";
-// $(".testimonials ul").css("width", tWidth);
+useEffect (() =>{
+	if (scrollWidth == 0) {
+		    tLeftButton.current.style.opacity ='0.3';
+		    tLeftButton.current.style.cursor ='not-allowed';
+		  } else if (scrollWidth == 2258) {
+		    tRightButton.current.style.opacity ='0.3';
+		    tRightButton.current.style.cursor ='not-allowed';
+		  } else {
+		    tRightButton.current.style.opacity ='1';
+		    tRightButton.current.style.cursor ='pointer';
+		    tLeftButton.current.style.opacity ='1';
+		    tLeftButton.current.style.cursor ='pointer';
+		  }
+})
 
-// // Button functionality
+console.log(scrollWidth)
+// const greyButton = () => {
 
-// var tPosition = 0;
-// console.log(tPosition);
-
-// tRightButton.click(function() {
-//   if (tPosition < (tItemCount - 1)) {
-//     tPosition++;
-//     var m = "-" + (100 * tPosition) + "vw";
-//     $(".testimonials ul").animate({
-//       "left": m
-//     }, 500);
-//     greyButton();
-//   }
-// });
-
-// tLeftButton.click(function() {
-//   if (tPosition > 0) {
-//     tPosition--;
-//     var m = "-" + (100 * tPosition) + "vw";
-//     $(".testimonials ul").animate({
-//       "left": m
-//     }, 500);
-//     greyButton();
-//   }
-// });
-
-// // Grey out buttons if not useable 
-
-// var greyButton = function() {
-//   if (tPosition == 0) {
-//     tLeftButton.css("opacity", "0.3");
-//     tLeftButton.css("cursor", "default");
-//   } else if (tPosition == (tItemCount - 1)) {
-//     tRightButton.css("opacity", "0.3");
-//     tRightButton.css("cursor", "default");
-//   } else {
-//     tRightButton.css("opacity", "1");
-//     tRightButton.css("cursor", "pointer");
-//     tLeftButton.css("opacity", "1");
-//     tLeftButton.css("cursor", "pointer");
-//   }
+//  
 // }
-
 // greyButton();
-
-// // And finally, if there's only one quote, kill the buttons altogether
-
-// if ( tItemCount == 1 ) {
-//   $('.testimonials-control').css('display','none');
-// }
-	// const data = ["1", "2", "3"]
-	// const [currentIndex, setCurrentindex] = useState(0)
-	const [current, setCurrent] = useState(0);
-  const length = sliderData.length;
-
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
-
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  };
-
-  if (!Array.isArray(sliderData) || sliderData.length <= 0) {
-    return null;
-  }
 
   return (
     <Carousel>
 					<ControlDiv>
-					<TestimonialsControl>
-						<button onClick={prevSlide}>
-							<img src="https://img.icons8.com/ios/24/000000/back.png" alt="prev"/>
+					<TestimonialsControl >
+						<button className="b1" onClick={scrollLeft} ref={tLeftButton} >
+							<i>
+							<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" className="artdeco-icon lazy-loaded" focusable="false">
+								<path d="M10,12l6,8.94L14.45,22,8.26,12.85a1.5,1.5,0,0,1,0-1.69L14.45,2,16,3.06Z" className="large-icon"></path>
+							</svg>
+							</i>
 							<span>Previous</span>
 						</button>
-						<button onClick={nextSlide}>
+						<button className="b2" onClick={scrollRight} ref={tRightButton} >
 							<span>Next</span>
-							<img src="https://img.icons8.com/ios/24/000000/forward.png" alt="next"/>
+							<i>
+							<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" className="artdeco-icon lazy-loaded" focusable="false">
+  							<path d="M14,12L8,3.06,9.55,2l6.19,9.15a1.5,1.5,0,0,1,0,1.69L9.55,22,8,20.94Z" className="large-icon" ></path>
+							</svg>
+							</i>
 						</button>
+						
 					</TestimonialsControl>
-					<CarouselComponent />
+					<CarouselContainer ref={showCaseRef}>
+					{showCarousel}
+					</CarouselContainer>
 					</ControlDiv>
 	</Carousel>
   )
 }
 const Carousel = styled.section`
-display: flex;
+	display: flex;
 	padding-top: 150px;
 	padding-bottom: 150px;
 	justify-content: center;
@@ -111,10 +114,10 @@ display: flex;
 `
 const ControlDiv = styled.div`
 	display: column;
-	
+	width: 1129px;
 `
 const TestimonialsControl = styled.div`
-	background-color: rgba(255,255,255,0.2);
+	background-color: #f5f5f5;
 	display: flex;
 	justify-content: right;
 	text-align: center;
@@ -122,24 +125,159 @@ const TestimonialsControl = styled.div`
 	width: 1129px;
 
 	button{
+	margin: 0px 8px;
+	padding: 0px 4px;
 	height: 40px;
-	width: 95px;
 	border: none;
 	background-color: transparent;
 	font-weight: 400;
 	font-size: 14px;
 	cursor: pointer;
 	border-radius: 28px;
-
-&:hover{
-	background-color: rgba(0, 0, 0, 0.04);
-	color: rgba(0, 0, 0, 0.9);
-}
-}
-img{
+	align-items: center;
+	&:hover{
+		background-color: rgba(0, 0, 0, 0.04);
+		color: rgba(0, 0, 0, 0.9);
+	}
+	}
+	.b1{
+		width: 116px;
+	}
+	.b2{
+		width: 89px;
+	}	
+i{
 	cursor: pointer;
 	vertical-align: middle
 }
 `
+
+const CarouselContainer = styled.ul`
+display: flex;
+
+// overflow-x: auto;
+scroll-behavior: smooth;
+
+
+-webkit-overflow-scrolling: touch;
+// scroll-snap-points-x: repeat(1128px);
+// scroll-snap-type: x mandatory;
+width: 1128px;
+overflow: hidden;
+
+li {
+	text-align: left;
+  scroll-snap-align: center;
+  flex: none;
+	flex-shrink: 0;
+	width: 1128px;
+	height: 450px;
+
+}
+`
+const TestimonialsLi = styled.li`
+
+display: flex;
+align-content: start;
+padding-top: 15px;
+padding-bottom: 10px;
+position: relative;
+justify-content: space-between;
+flex-wrap: wrap;
+max-width: 1128px;
+margin: auto;
+background-color: #f5f5f5;
+
+@media (max-width: 768px) {
+	margin: auto;
+	min-height: 0px;
+}
+ul {
+	list-style: none;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  padding: 0;
+}
+ul, li {
+  display: inline-block;
+  padding: 1rem;
+  position: relative;
+  text-align: stretch;
+  width: 100%;
+	max-width: 560px;
+}
+`
+const TitleContainer = styled.div`
+	display: block;
+	align-items: center;
+	width: 50%;
+	padding-top: 90px;
+	
+  h2 {
+    padding-bottom: 0;
+    width: 408px;
+    font-size: 48px;
+    color: #000000E6;
+    font-weight: 200;
+    line-height: 60px;
+
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 20px;
+      width: 100%;
+      line-height: 2;
+    }
+  }
+	h3 {
+    padding-bottom: 10px;
+    width: 100%;
+    font-size: 40px;
+    color: #8F5849;
+    font-weight: 400;
+    line-height: 1.25em;
+
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 20px;
+      width: 100%;
+      line-height: 2;
+    }
+  }
+	h4 {
+    padding-bottom: 0;
+    width: 100%;
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 1.25em;
+
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 20px;
+      width: 100%;
+      line-height: 2;
+    }
+  }
+`;
+const SectionImg = styled.div`
+display: flex;
+width: 44%;
+align-items: flex-end;
+img {
+	width: 450px;
+	height: 450px;
+	display: block;
+	position: relative;
+	flex-shrink: 1;
+	bottom: -2px;
+	@media (max-width: 768px) {
+		top: 230px;
+		width: 400px;
+		position: static;
+		height: 214px;
+		flex-shrink: 1;
+	}
+	`
 export default LandingSlider
 
