@@ -162,13 +162,13 @@ transition-property: all;
 transition-timing-function: cubic-bezier(0.34, 0, 0.21, 1);
 
 // overflow-x: auto;
-scroll-behavior: smooth;
+// scroll-behavior: smooth;
 align-items: stretch;
 width: 1128px;
 
 -webkit-overflow-scrolling: touch;
-scroll-snap-points-x: repeat(1128px);
-scroll-snap-type: x mandatory;
+// scroll-snap-points-x: repeat(1128px);
+// scroll-snap-type: x mandatory;
 
 li {
 	text-align: left;
