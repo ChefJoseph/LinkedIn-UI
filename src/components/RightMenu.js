@@ -244,10 +244,10 @@ i
 	font-size: 14px;
     min-height: 1.5rem;
     height: 20px;
-    padding: 0.2rem 0.8rem 0 0.8rem;
+    padding: 0.3rem 0.8rem 0 0.8rem;
     line height: 1.5rem;
     text-align: center;
-    color: #00000099;
+    color: rgba(0, 0, 0, 0.6);
     }
 & i.span{
     height: 20px;

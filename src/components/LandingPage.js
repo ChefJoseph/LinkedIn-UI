@@ -354,8 +354,6 @@ pointer-events: none;
 `
 const SignInButton = styled.button`
   display: inline-block;
-  justify-content: center;
-	align-items: center;
   background-color: #2977C9;
 	border: none;
 	color: white;
