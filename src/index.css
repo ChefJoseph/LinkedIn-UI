@@ -5,7 +5,7 @@ body {
 }
 
 :root, body, html {
-  background-color: #FFFFFF;
+  /* background-color: #f3f2ef; */
   /* help with fit  */
   box-sizing: border-box;
   margin: 0px;

@@ -3,9 +3,9 @@ import styled from 'styled-components'
 
 function Header() {
     return (
-        <Container>
-          <Content>
-            <Logo>
+        <Container id="HeaderContainer">
+          <Content id= "Header">
+            <Logo id="HeaderLogo">
               <a href="/home">
                 <img src="/images/home-logo.svg" alt="" />
               </a>
@@ -15,7 +15,9 @@ function Header() {
                 <input type="text" placeholder="Search" />
               </div>
               <SearchIcon>
-                <img src="/images/search-icon.svg" alt="" />
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" className="mercado-match" width="16" height="16" focusable="false">
+  <path d="M14.56 12.44L11.3 9.18a5.51 5.51 0 10-2.12 2.12l3.26 3.26a1.5 1.5 0 102.12-2.12zM3 6.5A3.5 3.5 0 116.5 10 3.5 3.5 0 013 6.5z"></path>
+</svg>
               </SearchIcon>
             </Search>
             <Nav>
@@ -58,8 +60,9 @@ function Header() {
                 <User>
                   <a>
                     <img src="/images/user.svg" alt="" />
-                    <span>Me</span>
-                    <img src="/images/down-icon.svg" alt="" />
+                    <span>Me
+                    <img src="/images/down-icon.svg" alt="" width="12" height= "12"/>
+                    </span>
                   </a>
     
                   <SignOut>
@@ -72,10 +75,21 @@ function Header() {
                     <img src="/images/nav-work.svg" alt="" />
                     <span>
                       Work
-                      <img src="/images/down-icon.svg" alt="" />
+                      <img src="/images/down-icon.svg" alt="" width="12" height= "12"/>
                     </span>
                   </a>
                 </Work>
+                <NavList>
+                  <a >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" focusable="false" >
+                        <path fillRule="evenodd" clipRule="evenodd" d="M23 3H1a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1ZM2 19h20V5H2v14Z" fill="currentColor"></path>
+                        <path fillRule="evenodd" clipRule="evenodd" d="M4 9h6V7H4v2Zm0 4h6v-2H4v2Zm0 4h6v-2H4v2Zm-2 2h10V5H2v14Z" fill="currentColor" fillOpacity=".25"></path>
+                        <path fillRule="evenodd" clipRule="evenodd" d="M14 9h6V7h-6v2Zm0 4h6v-2h-6v2Zm6 4h-6v-2h6v2Z" fill="currentColor" fillOpacity=".6"></path>
+                        <path fillRule="evenodd" clipRule="evenodd" d="M10 7.534v8.933a.28.28 0 0 0 .439.23l6.433-4.436A.307.307 0 0 0 17 12a.305.305 0 0 0-.128-.26l-6.433-4.437a.28.28 0 0 0-.439.23Z" fill="currentColor"></path>
+                    </svg>
+                    <span>Learning</span>
+                  </a>
+                </NavList>
               </NavListWrap>
             </Nav>
           </Content>
@@ -86,19 +100,16 @@ function Header() {
     const Container = styled.div`
       background-color: white;
       border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-      left: 0;
-      padding: 0 24px;
-      position: fixed;
-      top: 0;
-      width: 100vw;
-      z-index: 100;
+    //   padding: 0 30px;
+      width: 100%;
     `;
     
     const Content = styled.div`
       display: flex;
       align-items: center;
       margin: 0 auto;
-      min-height: 100%;
+    //   min-height: 4.8rem;
+      width: 100%;
       max-width: 1128px;
     `;
     
@@ -111,15 +122,18 @@ function Header() {
       opacity: 1;
       flex-grow: 1;
       position: relative;
+	
       & > div {
-        max-width: 280px;
+				max-width: 280px;
+        display: block;
+				
         input {
           border: none;
           box-shadow: none;
           background-color: #eef3f8;
           border-radius: 2px;
           color: rgba(0, 0, 0, 0.9);
-          width: 218px;
+          width: 232px;
           padding: 0 8px 0 40px;
           line-height: 1.75;
           font-weight: 400;
@@ -127,16 +141,23 @@ function Header() {
           height: 34px;
           border-color: #dce6f1;
           vertical-align: text-top;
+					
         }
       }
     `;
     
     const SearchIcon = styled.div`
+			color: rgba(0, 0, 0, 0.6);
       width: 40px;
+			height: 34px;
+			padding-top: 9px;
+			padding-bottom: 2px;
+			padding-right: 5px;
+			padding-left: 15px;
       position: absolute;
+			
       z-index: 1;
-      top: 10px;
-      left: 2px;
+			top: 0;
       border-radius: 0 2px 2px 0;
       margin: 0;
       pointer-events: none;
@@ -148,6 +169,7 @@ function Header() {
     const Nav = styled.nav`
       margin-left: auto;
       display: block;
+			color: rgba(0, 0, 0, 0.6);
       @media (max-width: 768px) {
         position: fixed;
         left: 0;
@@ -247,8 +269,9 @@ function Header() {
       }
     `;
     
-    const Work = styled(User)`
+    const Work = styled(NavList)`
       border-left: 1px solid rgba(0, 0, 0, 0.08);
+      
     `;
 
 export default Header

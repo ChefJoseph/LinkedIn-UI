@@ -22,7 +22,7 @@ function LandingPage() {
 					</NavList>
 					<NavList>
 						<a >
-							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" fill="none" focusable="false" >
+							<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" focusable="false" >
 								<path d="M9 14v6H0v-6c0-1.7 1.3-3 3-3h3c1.7 0 3 1.3 3 3Zm5.5-3c1.9 0 3.5-1.6 3.5-3.5S16.4 4 14.5 4 11 5.6 11 7.5s1.6 3.5 3.5 3.5Zm1 2h-2c-1.4 0-2.5 1.1-2.5 2.5V20h7v-4.5c0-1.4-1.1-2.5-2.5-2.5ZM4.5 0C2 0 0 2 0 4.5S2 9 4.5 9 9 7 9 4.5 7 0 4.5 0Z" fill="currentColor"></path>
 							</svg>
 							<span>People</span>
@@ -30,7 +30,7 @@ function LandingPage() {
 					</NavList>
 					<NavList>
 						<a >
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" fill="none" focusable="false" >
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" fill="none" focusable="false" >
 								<path fillRule="evenodd" clipRule="evenodd" d="M23 3H1a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1ZM2 19h20V5H2v14Z" fill="currentColor"></path>
 								<path fillRule="evenodd" clipRule="evenodd" d="M4 9h6V7H4v2Zm0 4h6v-2H4v2Zm0 4h6v-2H4v2Zm-2 2h10V5H2v14Z" fill="currentColor" fillOpacity=".25"></path>
 								<path fillRule="evenodd" clipRule="evenodd" d="M14 9h6V7h-6v2Zm0 4h6v-2h-6v2Zm6 4h-6v-2h6v2Z" fill="currentColor" fillOpacity=".6"></path>
@@ -39,14 +39,15 @@ function LandingPage() {
 							<span>Learning</span>
 						</a>
 					</NavList>
-					<NavList>
+					<NavList className="job">
 						<a >
-							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" focusable="false" >
+							<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" focusable="false" >
 								<path d="M15 4V3c0-1.7-1.3-3-3-3H8C6.3 0 5 1.3 5 3v1H0v4c0 1.7 1.3 3 3 3h14c1.7 0 3-1.3 3-3V4h-5ZM7 3c0-.6.4-1 1-1h4c.6 0 1 .4 1 1v1H7V3Zm10 9c1.2 0 2.3-.5 3-1.4V15c0 1.7-1.3 3-3 3H3c-1.7 0-3-1.3-3-3v-4.4c.7.9 1.8 1.4 3 1.4h14Z" fill="currentColor"></path>
 							</svg>
 							<span>Jobs</span>
 						</a>
-					</NavList>
+					</NavList >
+				
 					<div>
 						<Join>Join now</Join>
 						<SignIn>Sign in</SignIn>
@@ -67,11 +68,15 @@ function LandingPage() {
 								<InputLabel htmlFor="password">Password</InputLabel>
 							</LoginInputBox>
 						</LoginInputContainer>
-						<a >Forgot password?</a>
+						<span >Forgot password?</span>
 						<SignInButton>
 							<Link to="/home">Sign up</Link>
 						</SignInButton>
-						
+							<div className="signOrDiv">
+							<span class="signOr">
+								or
+							</span>
+							</div>
 						<Google>
 							<img src="/images/google.svg" alt="" />
 								Sign in with Google
@@ -139,15 +144,17 @@ const NavList = styled.li`
     background: transparent;
     display: flex;
     flex-direction: column;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
-    justify-content: center;
+    // justify-content: center;
     line-height: 1.5;
     min-height: 52px;
     min-width: 80px;
     position: relative;
     text-decoration: none;
 		cursor: pointer;
+
+		
     span {
       color: rgba(0, 0, 0, 0.6);
       display: flex;
@@ -156,7 +163,13 @@ const NavList = styled.li`
     @media (max-width: 768px) {
       min-width: 70px;
     }
-  }
+  } 
+	&.job {
+		border-right: 1px solid #bbb;
+		align-items: bottom;
+		height: 37px;
+	}
+	
   &:hover,
   &:active {
     a {
@@ -166,6 +179,7 @@ const NavList = styled.li`
     }
   }
 `;
+
 
 const Join = styled.a`
   font-size: 16px;
@@ -249,12 +263,24 @@ const LoginForm = styled.form`
   @media (max-width: 768px) {
     margin-top: 20px;
   }
-	a {
+	& span {
 		cursor: pointer;
-		textDecoration: none;
+		text-decoration: none;
 		 color: #000000E6; 
-		 margin: 300px 0px 24px 0;
+		 padding: 300px 0px 24px 0px;
 
+	}
+	& div.signOrDiv {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+	& span.signOr {
+		color: #00000099;
+		font-size: 14px;
+		line-height: 1.43;
+		font-weight: 400;
+		padding: 0 16px;
 	}
 `;
 const LoginInputContainer =styled.div`
@@ -327,7 +353,7 @@ pointer-events: none;
 
 `
 const SignInButton = styled.button`
-  display: flex;
+  display: inline-block;
   justify-content: center;
 	align-items: center;
   background-color: #2977C9;
@@ -336,28 +362,25 @@ const SignInButton = styled.button`
   height: 56px;
   width: 100%;
   border-radius: 28px;
-	margin-top: 20px;
-	margin-bottom: 40px;
+	margin-top: 24px;
+	margin-bottom: 20px;
 	cursor: pointer;
   box-shadow: inset 0 0 0 1px rgb(0 0 0 / 60%),
     inset 0 0 0 2px rgb(0 0 0 / 0%) inset 0 0 0 1px rgb(0 0 0 / 0);
-  vertical-align: middle;
   z-index: 0;
   transition-duration: 167ms;
-  // font-size: 20px;
-  // color: #FFFFFF;
+
   &:hover {
     background-color: #006699;
     color: #FFFFFF;
   }
-	a{
-		margin: 0px;
+	& a{
 		font-size: 20px;
 		color: #FFFFFF;
 		text-decoration: none;
 		height: 56px;
 		width: 100%;
-		padding-top: 40px;
+		
 		text-align: center;
 		line-height: 1em;
 	}
