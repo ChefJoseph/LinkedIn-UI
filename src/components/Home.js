@@ -13,9 +13,14 @@ function Home() {
 			</HeaderDiv>
 			<Container id="layoutcontainer">
 				<Layout id="layout">
-					<LeftMenu/>
+					<FixedColumn>
+						<LeftMenu/>
+					</FixedColumn>
 					<Feed/>
-					<RightMenu/>
+					<FixedColumn>
+						<RightMenu/>
+					</FixedColumn>
+				
 				</Layout>
     	</Container>
 		</HomeContainer>
@@ -68,5 +73,9 @@ const Layout = styled.div`
     padding: 0 5px;
   }
 `;
+const FixedColumn = styled.div` 
+
+
+`
 
 export default Home

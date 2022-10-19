@@ -9,6 +9,7 @@ function LeftMenu() {
       <UserInfo>
         <CardBackground />
         <a>
+          <Photo src= "https://media-exp1.licdn.com/dms/image/D4E35AQG5Zrf0sPbMwg/profile-framedphoto-shrink_100_100/0/1664991563190?e=1666681200&v=beta&t=ZGEDtae43PZ4JjwIKWxpDEeCTqsV08zh4139BzBsmHg" alt="profile" />
           <Link>Joseph Hirotsu</Link>
         </a>
         <a>
@@ -73,11 +74,14 @@ function LeftMenu() {
 const Container = styled.div`
 grid-area: leftside;
 cursor: pointer;
+position: sticky;
+top: 76px;
+
 `;
 
 const MenuCard = styled.div`
 text-align: center;
-overflow: hidden;
+// overflow: hidden;
 margin-bottom: 8px;
 background-color: #fff;
 border-radius: 5px;
@@ -95,13 +99,27 @@ word-break: break-word;
 `;
 
 const CardBackground = styled.div`
-background: url("/images/card-bg.svg");
+background: url(https://media-exp1.licdn.com/dms/image/C5616AQHY4weoJU-ALg/profile-displaybackgroundimage-shrink_200_800/0/1657633164322?e=1671667200&v=beta&t=D6CWeQNhYc2KWVSX1iS8SAqYULrmPGvUsUF1LtA22Z0);
 background-position: center;
 background-size: 462px;
 height: 54px;
 margin: -12px -12px 0;
 `;
 
+const Photo = styled.img`
+box-shadow: none;
+width: 72px;
+height: 72px;
+box-sizing: border-box;
+background-clip: content-box;
+background-color: white;
+background-position: center;
+background-size: 60%;
+background-repeat: no-repeat;
+border: 2px solid white;
+margin: -38px auto 12px;
+border-radius: 50%;
+`;
 
 const Link = styled.div`
 font-size: 16px;
@@ -119,6 +137,7 @@ font-weight: 400;
 `;
 
 const Connections = styled.div`
+
 border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 padding-top: 12px;
 padding-bottom: 12px;
@@ -182,9 +201,12 @@ span {
 }
 `;
 
-const CommunityCard = styled(ArtCard)`
+const CommunityCard = styled(MenuCard)`
+position: sticky;
+top: 20px;
+transition: top 667ms ease-in-out;
+
 padding: 8px 0 0;
-// text-align: left;
 display: flex;
 flex-direction: column;
 color: rgba(0, 0, 0, 0.9);

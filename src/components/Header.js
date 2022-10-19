@@ -59,7 +59,7 @@ function Header() {
     
                 <User>
                   <a>
-                    <img src="/images/user.svg" alt="" />
+                    <img src="https://media-exp1.licdn.com/dms/image/D4E35AQG5Zrf0sPbMwg/profile-framedphoto-shrink_100_100/0/1664991563190?e=1666681200&v=beta&t=ZGEDtae43PZ4JjwIKWxpDEeCTqsV08zh4139BzBsmHg" alt="" />
                     <span>Me
                     <img src="/images/down-icon.svg" alt="" width="12" height= "12"/>
                     </span>
@@ -102,6 +102,7 @@ function Header() {
       border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     //   padding: 0 30px;
       width: 100%;
+			
     `;
     
     const Content = styled.div`
@@ -167,6 +168,7 @@ function Header() {
     `;
     
     const Nav = styled.nav`
+		cursor: pointer;
       margin-left: auto;
       display: block;
 			color: rgba(0, 0, 0, 0.6);

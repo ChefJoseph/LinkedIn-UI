@@ -133,14 +133,16 @@ function RightMenu() {
 };
 
 const Container = styled.div`
-
+grid-area: rightside;
+position: sticky;
+top: 76px;
 `;
 
 const NewsCard = styled.div`
-// text-align: center;
+
 overflow: hidden;
 background-color: #fff;
-border-radius: 5px;
+border-radius: 6px;
 position: relative;
 border: none;
 box-shadow: 0 0 0 1px rgb(0 0 0 / 15%), 0 0 0 rgb(0 0 0 / 20%);
@@ -157,6 +159,9 @@ width: 100%;
 color: rgba(0, 0, 0, 0.9);
 h2{
     font-weight: 500;
+}
+svg{
+    cursor: pointer;
 }
 
 `;
