@@ -375,7 +375,7 @@ nav{
 
 }
 
-#touch:checked + .slide {
+#touch: checked + .slide {
   height: 382px;
   width: 355px;
   z-index: 100;
