@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import Posting from './Posting'
-import {articleData} from './articleData'
+import {articleData} from '../dataJS/articleData'
 
 function Feed() {
 	const [showModal, setShowModal] = useState("close");

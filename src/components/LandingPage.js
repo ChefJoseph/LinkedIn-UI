@@ -73,7 +73,7 @@ function LandingPage() {
 							<Link to="/home">Sign up</Link>
 						</SignInButton>
 							<div className="signOrDiv">
-							<span class="signOr">
+							<span className="signOr">
 								or
 							</span>
 							</div>

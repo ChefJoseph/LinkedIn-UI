@@ -1,7 +1,7 @@
 import React, {useState, useRef, useEffect} from 'react'
 import styled from 'styled-components'
 // import CarouselComponent from './CarouselComponent'
-import { sliderData } from './sliderData'
+import { sliderData } from '../dataJS/sliderData'
 
 function LandingSlider() {
 	const [scrollWidth, setScrollWidth] = useState(0)
@@ -11,97 +11,82 @@ function LandingSlider() {
 	const tRightButton = useRef()
 
 	  // scroll to left
-		function scrollLeft() {
-			// console.log("left")
-			if (scrollWidth > 0) {
-				const left = scrollWidth - 1128
-				showCaseRef.current.style.transform = `translate(-${left}px)`
-				setScrollWidth(left)
-			}
-			console.log(showCaseRef.current.style.transform, "scrollLeft funct")
-		};
+	function scrollLeft() {
+		if (scrollWidth > 0) {
+			const left = scrollWidth - 1128
+			showCaseRef.current.style.transform = `translate(-${left}px)`
+			setScrollWidth(left)
+		}
+		console.log(showCaseRef.current.style.transform, "scrollLeft funct")
+	};
 		  // scroll to right
-			function scrollRight() {
-				// console.log("right")
-				if (scrollWidth < showCaseRef.current.scrollWidth - 1128) {
-					const right = scrollWidth + 1128
-					showCaseRef.current.style.transform = `translate(-${right}px)`
-					// showCaseRef.current.scrollLeft = `${frontScrollWidth - right}`
-					setScrollWidth(right)
-					// const left = frontScrollWidth - 1128
-					// // showCaseRef.current.scrollLeft = `${left}`
-					// setFrontScrollWidth(left)
-				}
-				console.log(showCaseRef.current.style.transform, "scrollRight funct")
-			};
+	function scrollRight() {
+		if (scrollWidth < showCaseRef.current.scrollWidth - 1128) {
+			const right = scrollWidth + 1128
+			showCaseRef.current.style.transform = `translate(-${right}px)`
+			setScrollWidth(right)
+		}
+		console.log(showCaseRef.current.style.transform, "scrollRight funct")
+	};
 
 	const showCarousel = sliderData.map((slide, index)=> {
 		return (
-							
-					<TestimonialsLi key={index} >
-						<TitleContainer>
-							<h3>{slide.h3}</h3>
-							<h4>{slide.h4}</h4>
-						</TitleContainer>
-						<SectionImg>
-							<img src = {slide.image} alt = 'altimg'/>
-						</SectionImg>							
-					</TestimonialsLi>			
-			
-									)
-								})
-
-useEffect (() =>{
-	if (scrollWidth === 0) {
-		    tLeftButton.current.style.opacity ='0.3';
-		    tLeftButton.current.style.cursor ='not-allowed';
-		  } else if (scrollWidth === 2256) {
-		    tRightButton.current.style.opacity ='0.3';
-		    tRightButton.current.style.cursor ='not-allowed';
-		  } else {
-		    tRightButton.current.style.opacity ='1';
-		    tRightButton.current.style.cursor ='pointer';
-		    tLeftButton.current.style.opacity ='1';
-		    tLeftButton.current.style.cursor ='pointer';
-		  }
-})
-
-// console.log(scrollWidth)
-// const greyButton = () => {
-
-//  
-// }
-// greyButton();
+			<TestimonialsLi key={index}>
+				<TitleContainer>
+					<h3>{slide.h3}</h3>
+					<h4>{slide.h4}</h4>
+				</TitleContainer>
+				<SectionImg>
+					<img src = {slide.image} alt = 'altimg'/>
+				</SectionImg>							
+			</TestimonialsLi>	
+		)		
+	})
+	//re-render useRef for current.style
+	useEffect (() =>{
+		if (scrollWidth === 0) {
+					tLeftButton.current.style.opacity ='0.3';
+					tLeftButton.current.style.cursor ='not-allowed';
+				} else if (scrollWidth === 2256) {
+					tRightButton.current.style.opacity ='0.3';
+					tRightButton.current.style.cursor ='not-allowed';
+				} else {
+					tRightButton.current.style.opacity ='1';
+					tRightButton.current.style.cursor ='pointer';
+					tLeftButton.current.style.opacity ='1';
+					tLeftButton.current.style.cursor ='pointer';
+				}
+	})
 
   return (
-    <Carousel>
-					<ControlDiv>
-					<TestimonialsControl >
-						<button className="b1" onClick={scrollLeft} ref={tLeftButton} >
-							<i>
-							<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" className="artdeco-icon lazy-loaded" focusable="false">
-								<path d="M10,12l6,8.94L14.45,22,8.26,12.85a1.5,1.5,0,0,1,0-1.69L14.45,2,16,3.06Z" className="large-icon"></path>
-							</svg>
-							</i>
-							<span>Previous</span>
-						</button>
-						<button className="b2" onClick={scrollRight} ref={tRightButton} >
-							<span>Next</span>
-							<i>
-							<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" className="artdeco-icon lazy-loaded" focusable="false">
-  							<path d="M14,12L8,3.06,9.55,2l6.19,9.15a1.5,1.5,0,0,1,0,1.69L9.55,22,8,20.94Z" className="large-icon" ></path>
-							</svg>
-							</i>
-						</button>
-						
-					</TestimonialsControl>
-					<CarouselContainer ref={showCaseRef}>
-					{showCarousel}
-					</CarouselContainer>
-					</ControlDiv>
-	</Carousel>
+		<Carousel>
+			<ControlDiv>
+			<TestimonialsControl >
+				<button className="b1" onClick={scrollLeft} ref={tLeftButton} >
+					<i>
+					<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" className="artdeco-icon lazy-loaded" focusable="false">
+						<path d="M10,12l6,8.94L14.45,22,8.26,12.85a1.5,1.5,0,0,1,0-1.69L14.45,2,16,3.06Z" className="large-icon"></path>
+					</svg>
+					</i>
+					<span>Previous</span>
+				</button>
+				<button className="b2" onClick={scrollRight} ref={tRightButton} >
+					<span>Next</span>
+					<i>
+					<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" className="artdeco-icon lazy-loaded" focusable="false">
+					<path d="M14,12L8,3.06,9.55,2l6.19,9.15a1.5,1.5,0,0,1,0,1.69L9.55,22,8,20.94Z" className="large-icon" ></path>
+					</svg>
+					</i>
+				</button>
+			</TestimonialsControl>
+			<CarouselContainer ref={showCaseRef} tabIndex={0}>
+			{showCarousel}
+			</CarouselContainer>
+			</ControlDiv>
+		</Carousel>
   )
 }
+
 const Carousel = styled.section`
 	display: flex;
 	padding-top: 150px;
@@ -161,14 +146,10 @@ transition-duration: 350ms;
 transition-property: all;
 transition-timing-function: cubic-bezier(0.34, 0, 0.21, 1);
 
-// overflow-x: auto;
-// scroll-behavior: smooth;
 align-items: stretch;
 width: 1128px;
 
 -webkit-overflow-scrolling: touch;
-// scroll-snap-points-x: repeat(1128px);
-// scroll-snap-type: x mandatory;
 
 li {
 	text-align: left;

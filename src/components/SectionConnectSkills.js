@@ -1,5 +1,5 @@
 import React from 'react'
-import LearnSkillsDropDown from './LearnSkillsDropDown'
+import LPDropDown from './LPDropDown'
 import styled from 'styled-components'
 
 function SectionConnectSkills() {
@@ -13,7 +13,7 @@ function SectionConnectSkills() {
 				</TitleContainer><TitleContainer>
           <img src = "/images/learnskills.svg" alt = 'altimg'/>
 					<h4>Learn the skills you need to succeed</h4>
-          <LearnSkillsDropDown/>
+          <LPDropDown/>
 				</TitleContainer>					
 			</TestimonialsLi>
       
