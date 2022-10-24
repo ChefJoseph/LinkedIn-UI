@@ -81,7 +81,7 @@ function LandingSections () {
 							<h3>Post your job for millions of people to see</h3>
 					</Title>
 					<SectionBody>
-							<TopicContainer>
+							<TopicContainer className="postjob">
 								<TopicButton>Post a job</TopicButton>
 							</TopicContainer>
 					</SectionBody>
@@ -131,7 +131,7 @@ const SectionJob = styled.section`
 	justify-content: space-between;
   flex-wrap: wrap;
   max-width: 1128px;
-	height: 375px;
+	// height: 375px;
   margin: auto;
 	background-color: #FFFFFF;
   @media (max-width: 768px) {
@@ -192,14 +192,16 @@ const Title = styled.div`
 `;
 
 const SectionBody = styled.div`
-	width: 55%;
+	width: 57%;
+	align-content: flex-start;
 h4 {
 	padding-bottom: 0;
 	width: 408px;
 	font-size: 16px;
-	color: #000000E6;
+	color: rgba(0, 0, 0, 0.6);
 	font-weight: 500;
-	line-height: 60px;
+	line-height: 1.25;
+	margin-bottom: 18px;
 
 	@media (max-width: 768px) {
 		text-align: center;
@@ -212,7 +214,10 @@ const TopicContainer = styled.div`
 	width: 100%;
 	display: flex;
   flex-wrap: wrap;
-	align-items: center;
+	&.postjob{
+		margin-top: 18px;
+	}
+	
 
 `
 const TopicButton = styled.a`
@@ -245,7 +250,7 @@ const Show = styled.button`
 	width: fit-content;
 	border: none;
 	background-color: transparent;
-	font-weight: 400;
+	font-weight: 00;
 	font-size: 16px;
 	padding-right: 400px;
 	padding-top: 12px;
