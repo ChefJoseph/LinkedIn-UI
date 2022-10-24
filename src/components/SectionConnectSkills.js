@@ -5,63 +5,62 @@ import styled from 'styled-components'
 function SectionConnectSkills() {
   return (
     <Section>
-      	<TestimonialsLi>
-				<TitleContainer>
+      <TestimonialsLi>
+        <TitleContainer>
           <img src = "/images/connectwithpeople.svg" alt = 'altimg'/>
-					<h4>Connect with people who can help</h4>
+          <h4>Connect with people who can help</h4>
           <TopicButton>Find people you know</TopicButton>
-				</TitleContainer>
+        </TitleContainer>
         <TitleContainer>
           <img src = "/images/learnskills.svg" alt = 'altimg'/>
-					<h4>Learn the skills you need to succeed</h4>
+          <h4>Learn the skills you need to succeed</h4>
           <LPDropDown/>
-				</TitleContainer>					
-			</TestimonialsLi>
-      
+        </TitleContainer>					
+      </TestimonialsLi>
     </Section>
   )
 }
 const Section = styled.div`
-height: 915px;
-width: 100%;
-// padding-top: 60px;
-// padding-bottom: 60px;
-background-color: #FFFFFF;
-display:flex;
-justify-content: center;
+  height: 915px;
+  width: 100%;
+  // padding-top: 60px;
+  // padding-bottom: 60px;
+  background-color: #FFFFFF;
+  display:flex;
+  justify-content: center;
 `
 const TestimonialsLi = styled.li`
 
-display: flex;
-align-content: start;
-
-padding-bottom: 10px;
-position: relative;
-
-flex-wrap: wrap;
-width: 1128px;
-margin: auto;
-background-color: #FFFFFF;
-
-@media (max-width: 768px) {
-	margin: auto;
-	min-height: 0px;
-}
-ul {
-	list-style: none;
-  position: relative;
   display: flex;
-  align-items: stretch;
-  overflow: hidden;
-  padding: 0;
-}
-ul, li {
-  display: inline-block;
+  align-content: start;
+
+  padding-bottom: 10px;
   position: relative;
-  text-align: stretch;
-  width: 100%;
-	max-width: 560px;
-}
+
+  flex-wrap: wrap;
+  width: 1128px;
+  margin: auto;
+  background-color: #FFFFFF;
+
+  @media (max-width: 768px) {
+    margin: auto;
+    min-height: 0px;
+  }
+  ul {
+    list-style: none;
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    padding: 0;
+  }
+  ul, li {
+    display: inline-block;
+    position: relative;
+    text-align: stretch;
+    width: 100%;
+    max-width: 560px;
+  }
 `
 const TitleContainer = styled.div`
 	display: block;
@@ -118,7 +117,7 @@ const TitleContainer = styled.div`
     width: 312px;
   }
 `;
-  const TopicButton = styled.a`
+const TopicButton = styled.a`
 	cursor: pointer;
 	box-shadow: inset 0 0 0 1px #000000E6;
 	display: flex;

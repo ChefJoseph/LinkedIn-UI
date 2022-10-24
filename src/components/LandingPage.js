@@ -51,8 +51,7 @@ function LandingPage() {
 							</svg>
 							<span>Jobs</span>
 						</a>
-					</NavList >
-				
+					</NavList>
 					<div>
 						<Join>Join now</Join>
 						<SignIn>
@@ -83,18 +82,16 @@ function LandingPage() {
 							<Link to="/home">Sign in</Link>
 						</SignInButton>
 							<div className="signOrDiv">
-							<span className="signOr">
-								or
-							</span>
+								<span className="signOr">or</span>
 							</div>
 						<Google>
-							<img src="/images/google.svg" alt="" />
+							<img src="/images/google.svg" alt=""/>
 								Sign in with Google
 						</Google>
 					</LoginForm>
 				</Hero>
       	<SectionImg>
-          <img src="https://static-exp1.licdn.com/aero-v1/sc/h/dxf91zhqd2z6b0bwg85ktm5s4" alt="" />
+          <img src="https://static-exp1.licdn.com/aero-v1/sc/h/dxf91zhqd2z6b0bwg85ktm5s4" alt=""/>
       	</SectionImg>
       </Section>
 			<LandingSections/>
@@ -104,7 +101,6 @@ function LandingPage() {
 }
 
 const Container = styled.div`
-	// padding: 0px;
 	background: #FFFFFF;
 `;
 
@@ -259,7 +255,6 @@ const Hero = styled.div`
 	width: 55%;
 	
   h1 {
-   
     width: 100%;
     font-size: 56px;
     color: #8f5849;
@@ -404,18 +399,18 @@ const InputField = styled.input`
 	}
 `
 const InputLabel = styled.label` 
-position: absolute;
-box-sizing: border-box;
-height: 48px;
-width: 100%;
-font-size: 1em;
-line-height: 1.5;
-font-weight: 400;
-color: rgba(0,0,0,0.6);
-padding: 12px;
+	position: absolute;
+	box-sizing: border-box;
+	height: 48px;
+	width: 100%;
+	font-size: 1em;
+	line-height: 1.5;
+	font-weight: 400;
+	color: rgba(0,0,0,0.6);
+	padding: 12px;
 
-transition: all .2s ease-in-out;
-pointer-events: none;
+	transition: all .2s ease-in-out;
+	pointer-events: none;
 
 
 `
@@ -479,23 +474,23 @@ const Google = styled.button`
 	}
 `;
 const SectionImg = styled.div`
-display: flex;
-width: 44%;
-align-items: flex-end;
-img {
-	width: 700px;
-	height: 560px;
-	display: block;
-	position: relative;
-	flex-shrink: 1;
-	bottom: -2px;
-	left: -5px;
-	// padding-top: 100px;
-	@media (max-width: 768px) {
-		top: 230px;
-		width: 400px;
-		position: static;
-		height: 214px;
+	display: flex;
+	width: 44%;
+	align-items: flex-end;
+	img {
+		width: 700px;
+		height: 560px;
+		display: block;
+		position: relative;
 		flex-shrink: 1;
+		bottom: -2px;
+		left: -5px;
+		// padding-top: 100px;
+		@media (max-width: 768px) {
+			top: 230px;
+			width: 400px;
+			position: static;
+			height: 214px;
+			flex-shrink: 1;
 	}`
 export default LandingPage

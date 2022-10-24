@@ -1,6 +1,5 @@
 import React, {useState, useRef, useEffect} from 'react'
 import styled from 'styled-components'
-// import CarouselComponent from './CarouselComponent'
 import { sliderData } from '../dataJS/sliderData'
 
 function LandingSlider() {

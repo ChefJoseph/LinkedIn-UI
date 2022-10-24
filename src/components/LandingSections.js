@@ -11,79 +11,79 @@ function LandingSections () {
 		<SectionContainer>
 			<Section>
 				<Title>
-						<h2>Explore topics you are interested in</h2>
+					<h2>Explore topics you are interested in</h2>
 				</Title>
 				<SectionBody>
-						<h4>CONTENT TOPICS</h4>
-						<TopicContainer>
-							<TopicButton>See All Topics</TopicButton>
-							<TopicButton>Workplace</TopicButton>
-							<TopicButton>Job Search</TopicButton>
-							<TopicButton>Careers</TopicButton>
-							<TopicButton>Interviewing</TopicButton>
-							<TopicButton>Salary and Compensation</TopicButton>
-							<TopicButton>Internships</TopicButton>
-							<TopicButton>Employee Benefits</TopicButton>
-						</TopicContainer>
+					<h4>CONTENT TOPICS</h4>
+					<TopicContainer>
+						<TopicButton>See All Topics</TopicButton>
+						<TopicButton>Workplace</TopicButton>
+						<TopicButton>Job Search</TopicButton>
+						<TopicButton>Careers</TopicButton>
+						<TopicButton>Interviewing</TopicButton>
+						<TopicButton>Salary and Compensation</TopicButton>
+						<TopicButton>Internships</TopicButton>
+						<TopicButton>Employee Benefits</TopicButton>
+					</TopicContainer>
 				</SectionBody>
 			</Section>
 			<SectionWhite>
 			<SectionJob>
 				<Title>
-						<h2>Find the right job or internship for you</h2>
+					<h2>Find the right job or internship for you</h2>
 				</Title>
 				<SectionBody>
-						<h4>SUGGESTED SEARCHES</h4>
-						<TopicContainer>
-							<TopicButton>Engineering</TopicButton>
-							<TopicButton>Business Development</TopicButton>
-							<TopicButton>Finance</TopicButton>
-							<TopicButton>Administrative Assistant</TopicButton>
-							<TopicButton>Retail Associate</TopicButton>
-							<TopicButton>Customer Service</TopicButton>
-							<TopicButton>Operations</TopicButton>
-							<TopicButton>Information Technology</TopicButton>
-							<TopicButton>Marketing</TopicButton>
-							<TopicButton>Human Resources</TopicButton>
-							{
-								show?
-								<TopicContainer>
-								<TopicButton>Healthcare Service</TopicButton>
-								<TopicButton>Sales</TopicButton>
-								<TopicButton>Program and Project Management</TopicButton>
-								<TopicButton>Accounting</TopicButton>
-								<TopicButton>Arts and Design</TopicButton>
-								<TopicButton>Community and Social Services</TopicButton>
-								<TopicButton>Consulting</TopicButton>
-								<TopicButton>Education</TopicButton>
-								<TopicButton>Entrepreneurship</TopicButton>
-								<TopicButton>Legal</TopicButton>
-								<TopicButton>Media and Communnications</TopicButton>
-								<TopicButton>Military and Protective Services</TopicButton>
-								<TopicButton>Product Management</TopicButton>
-								<TopicButton>Purchasing</TopicButton>
-								<TopicButton>Quality Assurance</TopicButton>
-								<TopicButton>Real Estate</TopicButton>
-								<TopicButton>Research</TopicButton>
-								<TopicButton>Support</TopicButton>
-								<TopicButton>Administrative</TopicButton>
-								</TopicContainer>
-								: null			
-							}
-							<Show onClick={()=>setShow(!show)}>{show ? "Show less ∧" : "Show more ∨"}</Show>
-						</TopicContainer>
+					<h4>SUGGESTED SEARCHES</h4>
+					<TopicContainer>
+						<TopicButton>Engineering</TopicButton>
+						<TopicButton>Business Development</TopicButton>
+						<TopicButton>Finance</TopicButton>
+						<TopicButton>Administrative Assistant</TopicButton>
+						<TopicButton>Retail Associate</TopicButton>
+						<TopicButton>Customer Service</TopicButton>
+						<TopicButton>Operations</TopicButton>
+						<TopicButton>Information Technology</TopicButton>
+						<TopicButton>Marketing</TopicButton>
+						<TopicButton>Human Resources</TopicButton>
+						{
+							show?
+							<TopicContainer>
+							<TopicButton>Healthcare Service</TopicButton>
+							<TopicButton>Sales</TopicButton>
+							<TopicButton>Program and Project Management</TopicButton>
+							<TopicButton>Accounting</TopicButton>
+							<TopicButton>Arts and Design</TopicButton>
+							<TopicButton>Community and Social Services</TopicButton>
+							<TopicButton>Consulting</TopicButton>
+							<TopicButton>Education</TopicButton>
+							<TopicButton>Entrepreneurship</TopicButton>
+							<TopicButton>Legal</TopicButton>
+							<TopicButton>Media and Communnications</TopicButton>
+							<TopicButton>Military and Protective Services</TopicButton>
+							<TopicButton>Product Management</TopicButton>
+							<TopicButton>Purchasing</TopicButton>
+							<TopicButton>Quality Assurance</TopicButton>
+							<TopicButton>Real Estate</TopicButton>
+							<TopicButton>Research</TopicButton>
+							<TopicButton>Support</TopicButton>
+							<TopicButton>Administrative</TopicButton>
+							</TopicContainer>
+							: null			
+						}
+						<Show onClick={()=>setShow(!show)}>{show ? "Show less ∧" : "Show more ∨"}</Show>
+					</TopicContainer>
 				</SectionBody>
 			</SectionJob>
 			</SectionWhite>
 			<SectionBeige>
 				<SectionPost>
 					<Title>
-							<h3>Post your job for millions of people to see</h3>
+						<h3>Post your job for millions of people to see</h3>
 					</Title>
 					<SectionBody>
-							<TopicContainer className="postjob">
-								<TopicButton>Post a job</TopicButton>
-							</TopicContainer>
+						<TopicContainer className="postjob">
+							<TopicButton>Post a job</TopicButton>
+						</TopicContainer>
 					</SectionBody>
 				</SectionPost>
 			</SectionBeige>
@@ -114,13 +114,13 @@ const Section = styled.section`
   }
 `;
 const SectionWhite = styled.div`
-width: 100%;
-background-color: #FFFFFF;
-`
+	width: 100%;
+	background-color: #FFFFFF;
+	`
 const SectionBeige= styled.div`
-width: 100%;
-background-color: #f9f2ed;
-`
+	width: 100%;
+	background-color: #f9f2ed;
+	`
 
 const SectionJob = styled.section`
   display: flex;
