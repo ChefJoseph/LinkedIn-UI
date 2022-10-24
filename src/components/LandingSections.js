@@ -131,6 +131,7 @@ const SectionJob = styled.section`
 	justify-content: space-between;
   flex-wrap: wrap;
   max-width: 1128px;
+	height: 375px;
   margin: auto;
 	background-color: #FFFFFF;
   @media (max-width: 768px) {

@@ -10,7 +10,8 @@ function SectionConnectSkills() {
           <img src = "/images/connectwithpeople.svg" alt = 'altimg'/>
 					<h4>Connect with people who can help</h4>
           <TopicButton>Find people you know</TopicButton>
-				</TitleContainer><TitleContainer>
+				</TitleContainer>
+        <TitleContainer>
           <img src = "/images/learnskills.svg" alt = 'altimg'/>
 					<h4>Learn the skills you need to succeed</h4>
           <LPDropDown/>

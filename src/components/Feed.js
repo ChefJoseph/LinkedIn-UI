@@ -29,14 +29,14 @@ function Feed() {
 			<PostBox id="postbox">
 				<div >
 					<img className="post-icon" src="https://media-exp1.licdn.com/dms/image/D4E35AQG5Zrf0sPbMwg/profile-framedphoto-shrink_100_100/0/1664991563190?e=1666681200&v=beta&t=ZGEDtae43PZ4JjwIKWxpDEeCTqsV08zh4139BzBsmHg" alt="profile pic"/>
-				<button 
+					<button 
 					onClick = {handleClick}
 					className="post-space">
 					Start a post    
-				</button> 
+					</button> 
 				</div>
 
-				<div>
+				<div className="postmediacontainer">
 					<button className="noborder">
 						<i >
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" className="mercado-match" width="24" height="24" focusable="false" color="#378fe9">
@@ -96,12 +96,6 @@ function Feed() {
 						<SharedImage>
 								<a>
 										
-												{/* // !article.sharedImg && article.video ? 
-												//     (<ReactPlayer width = {'100%'} url={article.video} />)
-												// :
-												// (
-												//     article.sharedImg && <img src={article.sharedImg} />
-												// ) */}
 												<img src= {article.bodyImg} alt="sharedimage"/>
 										
 								</a>
@@ -110,13 +104,15 @@ function Feed() {
 						<SocialCounts>
 								<li>
 										<button>
-												<img src="images/like-icon.png" alt="likes" />
-												<img src="images/clap-icon.png" alt="claps" />
-												<span>62</span>
+												<img src="https://static-exp1.licdn.com/sc/h/8ekq8gho1ruaf8i7f86vd1ftt" alt="likes" />
+												<img src="https://static-exp1.licdn.com/sc/h/lhxmwiwoag9qepsh4nc28zus" alt="idea" />
+												<img src="https://static-exp1.licdn.com/sc/h/cpho5fghnpme8epox8rdcds22"
+												alt="heart"/>
+												<span>{article.likes}</span>
 										</button>
 								</li>
 								<li>
-										<a> count-comments</a>
+										<a> {article.commentcount} comments &#x2022; {article.sharecount} shares </a>
 								</li>
 						</SocialCounts>
 
@@ -165,9 +161,6 @@ function Feed() {
 
 			<Posting showModal={showModal} handleClick = {handleClick} />
 	</Container>
-        // )
-      // }
-        // </>
     );
 };
 const Container = styled.div`
@@ -175,44 +168,29 @@ const Container = styled.div`
 grid-area: main;
 
 `;
-const FeedContainer = styled.div`
-    text-align: center;
-    overflow: hidden;
-		margin-top: 16px;
-    margin-bottom: 8px;
-		
-    background-color: #fff;
-		border-radius: 6px;
-position: relative;
-border: none;
-box-shadow: 0 0 0 1px rgb(0 0 0 / 15%), 0 0 0 rgb(0 0 0 / 20%);
-`;
 
 const PostBox = styled.div`
-
-		justify-content: space-around;
+	
+	justify-content: space-around;
     color: #958b7b;
     margin: 0 0 16px 0;
-		
-    background: #fff;
-		border-radius: 6px;
+    background: #ffffff;
 		position: relative;
-		border: none;
-		box-shadow: 0 0 0 1px rgb(0 0 0 / 15%), 0 0 0 rgb(0 0 0 / 20%);
+		border-radius: 6px;
+		border: 1px solid rgb(0, 0, 0, 0.2);
     div {
         button {
-					cursor: pointer;
+			cursor: pointer;
             outline: none;
             color: rgba(0,0,0,0.6);
             font-size: 14px;
+			font-weight: 50;
             line-height: 1.5;
             min-height: 48px;
             background: transparent;
-            
-					
             display: flex;
             align-items: center;
-            font-weight: 600;
+            
             &:hover {
                 background-color: rgba(0,0,0,0.07);
                 border-radius: 6px;
@@ -226,7 +204,7 @@ const PostBox = styled.div`
 						border-width: 1px;
   					border-radius: 28px;
 						border-color: rgba(0,0,0,0.3);
-						font-weight: 500;
+						// font-weight: 500;
 					&:hover{
 						background-color: rgba(0,0,0,0.07);
 					}
@@ -247,6 +225,7 @@ const PostBox = styled.div`
                 width: 48px;
                 margin-right: 8px;
                 border-radius: 50%;
+				
             }
             button {
                 margin: 4px 0;
@@ -267,9 +246,10 @@ const PostBox = styled.div`
             button {
                 svg {
 									vertical-align: top;
+									margin-left: -2px;
                 }
                 span {
-										margin-left: 8px;
+										margin-left: 11px;
                     color: #0000000E6;
 										font-weight: 500;
                 }
@@ -277,11 +257,21 @@ const PostBox = styled.div`
         }
     }
 `;
+const FeedContainer = styled.div`
 
-const Article = styled(FeedContainer)`
-    padding: 0;
+    overflow: hidden;
+		margin-top: 16px;
+    margin-bottom: 8px;
+    background-color: #f3f2ef;
+		width: 100%;
+		border: none;
+`;
+const Article = styled.div`
     margin: 0 0 8px;
-    overflow: visible;
+    overflow: hidden;
+		background-color: #ffffff;
+		border-radius: 6px;
+		border: 1px solid rgb(0, 0, 0, 0.2);
 `;
 
 const SharedActor = styled.div`
@@ -381,12 +371,15 @@ const SharedImage = styled.div`
 const SocialCounts = styled.ul`
     line-height: 100%;
     display: flex;
+		justify-content: space-between;
     align-items: flex-start;
     overflow: auto;
     list-style: none;
     margin: 0 16px;
     padding: 8px 0;
     border-bottom: 1px solid #e9e5df;
+		color: rgba(0,0,0,.6);
+	
     li {
         margin-right: 5px;
         font-size: 12px;
@@ -398,7 +391,12 @@ const SocialCounts = styled.ul`
     }
     img {
         width: 18px;
+				margin: -3px;
     }
+		span {
+			padding-left: 5px;
+			color: rgba(0,0,0,.6);
+		}
 `;
 
 const SocialActions = styled.div`

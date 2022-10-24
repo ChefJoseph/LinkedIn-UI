@@ -45,17 +45,17 @@ function LandingSlider() {
 	//re-render useRef for current.style
 	useEffect (() =>{
 		if (scrollWidth === 0) {
-					tLeftButton.current.style.opacity ='0.3';
-					tLeftButton.current.style.cursor ='not-allowed';
-				} else if (scrollWidth === 2256) {
-					tRightButton.current.style.opacity ='0.3';
-					tRightButton.current.style.cursor ='not-allowed';
-				} else {
-					tRightButton.current.style.opacity ='1';
-					tRightButton.current.style.cursor ='pointer';
-					tLeftButton.current.style.opacity ='1';
-					tLeftButton.current.style.cursor ='pointer';
-				}
+			tLeftButton.current.style.opacity ='0.3';
+			tLeftButton.current.style.cursor ='not-allowed';
+		} else if (scrollWidth === 2256) {
+			tRightButton.current.style.opacity ='0.3';
+			tRightButton.current.style.cursor ='not-allowed';
+		} else {
+			tRightButton.current.style.opacity ='1';
+			tRightButton.current.style.cursor ='pointer';
+			tLeftButton.current.style.opacity ='1';
+			tLeftButton.current.style.cursor ='pointer';
+		}
 	})
 
   return (
@@ -133,51 +133,51 @@ const TestimonialsControl = styled.div`
 	.b2{
 		width: 89px;
 	}	
-i{
+	i{
 	cursor: pointer;
 	vertical-align: middle
-}
+	}
 `
 
 const CarouselContainer = styled.ul`
-display: flex;
-transform: translate(0px);
-transition-duration: 350ms;
-transition-property: all;
-transition-timing-function: cubic-bezier(0.34, 0, 0.21, 1);
+	display: flex;
+	transform: translate(0px);
+	transition-duration: 350ms;
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.34, 0, 0.21, 1);
 
-align-items: stretch;
-width: 1128px;
-
--webkit-overflow-scrolling: touch;
-
-li {
-	text-align: left;
-  scroll-snap-align: center;
-  flex: none;
-	flex-shrink: 0;
+	align-items: stretch;
 	width: 1128px;
-	height: 450px;
 
-}
+	-webkit-overflow-scrolling: touch;
+
+	li {
+		text-align: left;
+		scroll-snap-align: center;
+		flex: none;
+		flex-shrink: 0;
+		width: 1128px;
+		height: 450px;
+
+	}
 `
 const TestimonialsLi = styled.li`
 
-display: flex;
-align-content: start;
-padding-top: 15px;
-padding-bottom: 10px;
-position: relative;
-justify-content: space-between;
-flex-wrap: wrap;
-width: 1108px;
-margin: auto;
-background-color: #f5f5f5;
-
-@media (max-width: 768px) {
+	display: flex;
+	align-content: start;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	position: relative;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 1108px;
 	margin: auto;
-	min-height: 0px;
-}
+	background-color: #f5f5f5;
+
+	@media (max-width: 768px) {
+		margin: auto;
+		min-height: 0px;
+	}
 `
 const TitleContainer = styled.div`
 	display: block;
@@ -231,23 +231,24 @@ const TitleContainer = styled.div`
   }
 `;
 const SectionImg = styled.div`
-display: flex;
-width: 44%;
-align-items: flex-end;
-img {
-	width: 450px;
-	height: 450px;
-	display: block;
-	position: relative;
-	flex-shrink: 1;
-	bottom: -2px;
-	@media (max-width: 768px) {
-		top: 230px;
-		width: 400px;
-		position: static;
-		height: 214px;
+	display: flex;
+	width: 44%;
+	align-items: flex-end;
+	img {
+		width: 450px;
+		height: 450px;
+		display: block;
+		position: relative;
 		flex-shrink: 1;
-	}
+		bottom: -2px;
+		@media (max-width: 768px) {
+			top: 230px;
+			width: 400px;
+			position: static;
+			height: 214px;
+			flex-shrink: 1;
+		}
+	}	
 	`
 export default LandingSlider
 

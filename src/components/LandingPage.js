@@ -1,10 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import { Link } from "react-router-dom";
 import LandingSections from './LandingSections'
 import Footer from './Footer'
 
 function LandingPage() {
+	const [isVisible, setVisible] = useState(false)
+	const toggle = (e) => {
+    setVisible(!isVisible);
+		e.preventDefault();
+  };
   return (
     <Container>
 			<Nav>
@@ -50,7 +55,9 @@ function LandingPage() {
 				
 					<div>
 						<Join>Join now</Join>
-						<SignIn>Sign in</SignIn>
+						<SignIn>
+							<Link to="/home">Sign in</Link>
+						</SignIn>
 					</div>
 				</NavListWrap>
 			</Nav>
@@ -64,13 +71,16 @@ function LandingPage() {
 								<InputLabel htmlFor="user">Email or phone number</InputLabel>
 							</LoginInputBox>	
 							<LoginInputBox>
-								<InputField type="password" autoComplete="off" id="password" placeholder=" "/>
-								<InputLabel htmlFor="password">Password</InputLabel>
+								<InputField type={!isVisible ? "password" : "text"} autoComplete="off" id="password" placeholder=" "/>
+								<InputLabel htmlFor="password"> Password</InputLabel>
+								<button onClick={toggle}>
+										{isVisible? "Hide":"Show"}
+								</button>
 							</LoginInputBox>
 						</LoginInputContainer>
 						<span >Forgot password?</span>
 						<SignInButton>
-							<Link to="/home">Sign up</Link>
+							<Link to="/home">Sign in</Link>
 						</SignInButton>
 							<div className="signOrDiv">
 							<span className="signOr">
@@ -84,7 +94,7 @@ function LandingPage() {
 					</LoginForm>
 				</Hero>
       	<SectionImg>
-          <img src="/images/LinkedInLanding1.png" alt="" />
+          <img src="https://static-exp1.licdn.com/aero-v1/sc/h/dxf91zhqd2z6b0bwg85ktm5s4" alt="" />
       	</SectionImg>
       </Section>
 			<LandingSections/>
@@ -95,6 +105,7 @@ function LandingPage() {
 
 const Container = styled.div`
 	// padding: 0px;
+	background: #FFFFFF;
 `;
 
 const Nav = styled.nav`
@@ -188,7 +199,8 @@ const Join = styled.a`
   text-decoration: none;
   border-radius: 28px;
   color: rgba(0, 0, 0, 0.6);
-  margin-right: 12px;
+  margin-right: 8px;
+	margin-left: 4px;
 	cursor: pointer;
   &:hover {
     background-color: rgba(0, 0, 0, 0.04);
@@ -212,6 +224,15 @@ const SignIn = styled.a`
     background-color: rgba(112, 181, 249, 0.08);
     color: #0a66c2;
   }
+	& a{
+		color: #0A66C2;
+		text-decoration: none;
+		height: 56px;
+		width: 100%;
+		
+		text-align: center;
+		line-height: 1em;
+	}
 	
 `;
 
@@ -276,11 +297,34 @@ const LoginForm = styled.form`
 		justify-content: center;
 	}
 	& span.signOr {
-		color: #00000099;
+		color: rgba(0,0,0,0.5);
 		font-size: 14px;
 		line-height: 1.43;
 		font-weight: 400;
 		padding: 0 16px;
+
+		display: flex;
+		align-items: center;
+		// margin: 1em -1em;
+	
+		&:before {
+			position: absolute;
+			content: "";
+			flex: 1;
+			height: 1px;
+			width: 42%;
+			margin: 0 -185px;
+			background: rgba(0,0,0,0.5)
+		}
+		&:after {
+			position: absolute;
+			content: "";
+			flex: 1;
+			height: 1px;
+			width: 42%;
+			margin: 0 2em;
+			background: rgba(0,0,0,0.5);
+		}
 	}
 `;
 const LoginInputContainer =styled.div`
@@ -306,6 +350,28 @@ const LoginInputBox = styled.div`
 	box-sizing: border-box;
 	font-weight: 400;
 	line-height: 1.5;
+	// justify-content: space-between;
+	button{
+		background: #FFFFFF;
+		color:rgba(0,0,0,0.6);
+		cursor: pointer;
+		font-size: 16px;
+		font-weight: 600;
+		height: 32px;
+		border: none;
+		padding: 0 8px;
+		text-align: center;
+		vertical-align: middle;
+		position: absolute;
+		margin-right: 8px;
+		left: 345px;
+		top: calc(50% - 16px);
+		// z-position: 2;
+	&:hover{
+		background-color: rgba(207, 207, 207, 0.25);
+    color: rgba(0, 0, 0, 0.75);
+	}
+	}
 
 `
 const InputField = styled.input` 
@@ -322,7 +388,8 @@ const InputField = styled.input`
 	box-sizing: border-box;
 	vertical-align: middle;
 	writing-mode: horizontal-tb;
-	display: inline-block;
+	// display: inline-block;
+	position: absolute;
 	text-align: start;
 	placeholder-shown: none;
 
@@ -338,7 +405,7 @@ const InputField = styled.input`
 `
 const InputLabel = styled.label` 
 position: absolute;
-	box-sizing: border-box;
+box-sizing: border-box;
 height: 48px;
 width: 100%;
 font-size: 1em;
@@ -416,12 +483,13 @@ display: flex;
 width: 44%;
 align-items: flex-end;
 img {
-	width: 500px;
-	height: 500px;
+	width: 700px;
+	height: 560px;
 	display: block;
 	position: relative;
 	flex-shrink: 1;
 	bottom: -2px;
+	left: -5px;
 	// padding-top: 100px;
 	@media (max-width: 768px) {
 		top: 230px;

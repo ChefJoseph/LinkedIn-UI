@@ -13,50 +13,32 @@ function Home() {
 			</HeaderDiv>
 			<Container id="layoutcontainer">
 				<Layout id="layout">
-					<FixedColumn>
-						<LeftMenu/>
-					</FixedColumn>
+					<LeftMenu/>
 					<Feed/>
-					<FixedColumn>
-						<RightMenu/>
-					</FixedColumn>
-				
+					<RightMenu/>
 				</Layout>
     	</Container>
 		</HomeContainer>
   )
 };
 const HomeContainer = styled.div`
-
-background: #f3f2ef;
-
-position: relative;
-justify-content: center;
-width: 100%;
+	
 `
 const HeaderDiv = styled.div` 
-	
 	width: 100%;
 	position: fixed;
-	z-index: 100;
+	z-index: 1;
 `
 const Container = styled.div`
-
-
 display: flex;
 position: relative;
 justify-content: center;
 
 padding-top: 52px;
-max-width: 1128px;
-margin-left:auto;
-margin-right: auto;
+width: 100%;
 
 `;
-
-
 const Layout = styled.div`
-
 	position: absolute;
 	margin: 25px 0;
   display: grid;

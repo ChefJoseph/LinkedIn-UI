@@ -62,7 +62,7 @@ function LeftMenu() {
 				</a>
 
 				<a>
-					<span className="bluetitles">Follow Hashtags</span>
+					<span className="bluetitles">Followed Hashtags</span>
 				</a>
 					<span className="discover">Discover more</span>
     </CommunityCard>
@@ -84,9 +84,9 @@ text-align: center;
 // overflow: hidden;
 margin-bottom: 8px;
 background-color: #fff;
+position: relative;
 border-radius: 5px;
 transition: box-shadow 83ms;
-position: relative;
 border: none;
 box-shadow: 0 0 0 1px rgb(0 0 0 / 15%), 0 0 0 rgb(0 0 0 / 20%);
 `;

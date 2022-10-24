@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from "react-router-dom";
 
 function Header() {
     return (
@@ -66,7 +67,7 @@ function Header() {
                   </a>
     
                   <SignOut>
-                    <a>Sign Out</a>
+                    <Link to="/"><a>Sign Out</a></Link>
                   </SignOut>
                 </User>
     
