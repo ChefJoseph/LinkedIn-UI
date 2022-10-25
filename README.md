@@ -16,13 +16,13 @@
   <h3>Dropdown menu GIF</h3>
   <image src="https://github.com/ChefJoseph/LinkedIn-UI/blob/main/public/images/Screen_Recording-_Dropdown_AdobeExpress.gif" alt="dropdown"/>
 </p>
-######
 <br>
 <h3>Homepage</h3>
 <image src="https://github.com/ChefJoseph/LinkedIn-UI/blob/main/public/images/Home-1.png" alt="homepage"/>
 <br>
 <h3>Landing page</h3>
 <image src="https://github.com/ChefJoseph/LinkedIn-UI/blob/main/public/images/Landing-whole.png" alt="landingwhole"/>
+######
 
 # Technologies
 ######
