@@ -22,7 +22,6 @@
 <br>
 <h3>Landing page</h3>
 <image src="https://github.com/ChefJoseph/LinkedIn-UI/blob/main/public/images/Landing-whole.png" alt="landingwhole"/>
-######
 
 # Technologies
 ######
