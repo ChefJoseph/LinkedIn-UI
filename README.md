@@ -1,6 +1,6 @@
 # LinkedIn-UI
 <br>
-<h4>I wanted to challenge myself and took on a personal project to replicate the LinkedIn landing page UI, without the help of using packages. The UI has a lot of components I had fun building from scratch.</h4>
+<h4>This project is a UI replica of the LinkedIn landing page and homepage, without the help of using packages. The UI has a lot of components I had fun building from scratch.</h4>
 <br>
 <h4>To be continued... Login-Auth, Homepage details, multimedia posting.</h4>
 <image src="https://github.com/ChefJoseph/LinkedIn-UI/blob/main/public/images/Landing-1.3.png" alt="landing"/>
